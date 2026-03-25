@@ -1,0 +1,12 @@
+{% if x_text_quickview %}
+  <span class="button-text" x-text="$store.xQuickView && $store.xQuickView.buttonLabel"></span>
+{% else %}
+  {% if show_button_style == 'text-link' or show_button_style == 'link' %}
+    <div class="relative overflow-hidden">
+      <span class="button-text btn-text-link-effect-1 relative top-0 is-focus-button:opacity-0">{{ button_label }}</span>
+      <span class="button-text btn-text-link-effect-2 absolute top-full left-0 is-focus-button:opacity-0">{{ button_label }}</span>
+    </div>
+  {% else %}
+    <span class="button-text text-nowrap">{{ button_label }}</span>
+  {% endif %}
+{% endif %}

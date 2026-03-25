@@ -1,0 +1,109 @@
+{%- comment -%}
+  Parameters:
+   - img_class: class image
+   - img {url}: Image URL
+   - alt {text}: ALT description
+   - aspect_ratio: aspect ratio
+   - img_width: image width
+   - attributes: list of attributes
+   - loading: loading
+{%- endcomment -%}
+{% assign aspect_ratio = aspect_ratio | default: 3 %}
+
+{% liquid
+	if img_width == null
+		assign img_width = img.width
+	else
+		assign img_width = img_width | default: 800
+	endif
+%}
+
+{% liquid
+	capture srcset
+		if img_width > 150
+			if image_mobile != blank
+				echo image_mobile | image_url: width: 150
+				echo ' 150w,'
+			else
+				echo img | image_url: width: 150
+				echo ' 150w,'
+			endif
+		endif
+		if img_width > 200
+			if image_mobile != blank
+				echo image_mobile | image_url: width: 200
+				echo ' 200w,'
+			else
+				echo img | image_url: width: 200
+				echo ' 200w,'
+			endif
+		endif
+		if img_width > 300
+			if image_mobile != blank
+				echo image_mobile | image_url: width: 300
+				echo ' 300w,'
+			else
+				echo img | image_url: width: 300
+				echo ' 300w,'
+			endif
+		endif
+		if img_width > 400
+			if image_mobile != blank
+				echo image_mobile | image_url: width: 400
+				echo ' 400w,'
+			else
+				echo img | image_url: width: 400
+				echo ' 400w,'
+			endif
+		endif
+		if img_width > 480
+			if image_mobile != blank
+				echo image_mobile | image_url: width: 480
+				echo ' 480w,'
+			else
+				echo img | image_url: width: 480
+				echo ' 480w,'
+			endif
+		endif
+		if img_width > 550
+			if image_mobile != blank
+				echo image_mobile | image_url: width: 550
+				echo ' 550w,'
+			else
+				echo img | image_url: width: 550
+				echo ' 550w,'
+			endif
+		endif
+		if img_width > 768
+			echo img | image_url: width: 768
+			echo ' 768w,'
+		endif
+		if img_width > 1024
+			echo img | image_url: width: 1024
+			echo ' 1024w,'
+		endif
+		if img_width > 1280
+			echo img | image_url: width: 1280
+			echo ' 1280w,'
+		endif
+	endcapture
+%}
+{% assign default_image_alt = 'accessibility.default_alt' | t %}
+<img
+	class="{{ img_class | escape }}"
+	src="{{ img | image_url }}"
+	alt="{{ alt | default: default_image_alt | escape }}"
+	width="{{ img_width | default: 1100 }}"
+	height="{{ img_width | divided_by: aspect_ratio | ceil }}"
+	{% if eager_loading %}
+		loading="eager"
+		fetchpriority="high"
+		decoding="sync"
+	{% else %}
+		loading="lazy"
+	{% endif %}
+	{{ attributes }}
+	srcset="{{ srcset }}"
+	sizes="{{ sizes }}"
+	{% if use_focal_point %}style="object-position:{{ img.presentation.focal_point }}"{% endif %}
+>

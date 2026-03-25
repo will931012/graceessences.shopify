@@ -1,0 +1,354 @@
+{
+  "sections": {
+    "video_QLRBTx": {
+      "type": "video",
+      "name": "t:global.video.video",
+      "settings": {
+        "show_hero": false,
+        "sub_heading_video": "",
+        "heading": "",
+        "heading_size": "medium",
+        "heading_tag": "h2",
+        "text": "",
+        "text_size": "medium",
+        "highlight_effect": "underline",
+        "text_transform": "none",
+        "show_sound_control": false,
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "enable_video_autoplay": true,
+        "video_alt_text": "",
+        "overlay_opacity": 0,
+        "button_label": "",
+        "show_button_style": "primary",
+        "button_link": "",
+        "open_new_window": false,
+        "content_position": "center",
+        "content_horizontal": 50,
+        "content_vertical": 50,
+        "content_alignment": "center",
+        "desktop_height": "550px",
+        "mobile_height": "300px",
+        "section_width": "full-width",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "color_scheme_light": "",
+        "color_scheme_dark": ""
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_heading": true,
+        "heading_size": "medium",
+        "heading_tag": "h1",
+        "show_breadcrumbs": true,
+        "padding_top": 28,
+        "padding_bottom": 0,
+        "breadcrumbs_background_light": "rgba(0,0,0,0)",
+        "breadcrumbs_text_light": "rgba(0,0,0,0)",
+        "breadcrumbs_text_link_light": "rgba(0,0,0,0)",
+        "breadcrumbs_background_dark": "rgba(0,0,0,0)",
+        "breadcrumbs_text_dark": "rgba(0,0,0,0)",
+        "breadcrumbs_text_link_dark": "rgba(0,0,0,0)"
+      }
+    },
+    "rich_text_qRJfDJ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_mt4Pza": {
+          "type": "heading",
+          "settings": {
+            "heading": "Welcome to Maximize Evolutions, your trusted stop for high-quality electronic devices. Born from a love of high-tech gears, we provide carefully selected products to guarantee your satisfaction. From earphones to the latest smartphone models, Evolutions got you well-covered at the best prices!",
+            "heading_size": "small",
+            "heading_tag": "h2",
+            "highlight_effect": "underline",
+            "text_transform": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mt4Pza"
+      ],
+      "name": "t:rich_text.name",
+      "settings": {
+        "content_alignment": "center",
+        "content_alignment_mobile": "center",
+        "section_width": "page-width",
+        "padding_top": 32,
+        "padding_bottom": 48,
+        "show_section_divider": false,
+        "color_scheme_light": "scheme-1",
+        "color_scheme_dark": ""
+      }
+    },
+    "promotion_grid_tTY6hJ": {
+      "type": "promotion-grid",
+      "blocks": {
+        "promotion_xhmE6K": {
+          "type": "promotion",
+          "settings": {
+            "image_link": "",
+            "open_new_window": false,
+            "show_sound_control": false,
+            "video_url": "",
+            "enable_video_autoplay": false,
+            "video_alt_text": "",
+            "enable_content_overlay": true,
+            "content_position": "bottom",
+            "overlay_opacity": 0,
+            "number_of_columns": 2,
+            "number_of_row": 1,
+            "icon": "none",
+            "another_icon": "",
+            "icon_size": 90,
+            "sub_title": "",
+            "title": "Your Trusted Tech Partner",
+            "title_size": "small",
+            "text": "<p>Expert advice, honest guidance, and reliable support — every step of your journey.<\/p>",
+            "text_size": "medium",
+            "highlight_effect": "marker",
+            "text_transform": "none",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "secondary",
+            "text_align": "left",
+            "media_position": "top",
+            "line_1": "",
+            "line_1_size": "medium",
+            "line_2": "",
+            "line_2_size": "medium",
+            "line_3": "",
+            "line_3_size": "medium",
+            "sale_label_position": "bottom-left",
+            "sale_label_style": "circle",
+            "color_scheme_light": "scheme-1",
+            "color_scheme_dark": "scheme-1",
+            "sale_label_background_color": "#ce021e",
+            "sale_label_color": "#ffffff"
+          }
+        },
+        "promotion_GNkyHh": {
+          "type": "promotion",
+          "settings": {
+            "image_link": "",
+            "open_new_window": false,
+            "show_sound_control": false,
+            "video_url": "",
+            "enable_video_autoplay": false,
+            "video_alt_text": "",
+            "enable_content_overlay": true,
+            "content_position": "bottom",
+            "overlay_opacity": 10,
+            "number_of_columns": 1,
+            "number_of_row": 1,
+            "icon": "none",
+            "another_icon": "",
+            "icon_size": 90,
+            "sub_title": "",
+            "title": "Warranty Policy",
+            "title_size": "small",
+            "text": "<p>Enjoy total peace of mind with EvoI++.</p>",
+            "text_size": "small",
+            "highlight_effect": "marker",
+            "text_transform": "none",
+            "button_label": "Learn More",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "text-link",
+            "text_align": "left",
+            "media_position": "top",
+            "line_1": "",
+            "line_1_size": "medium",
+            "line_2": "",
+            "line_2_size": "medium",
+            "line_3": "",
+            "line_3_size": "medium",
+            "sale_label_position": "top-left",
+            "sale_label_style": "circle",
+            "color_scheme_light": "",
+            "color_scheme_dark": "",
+            "sale_label_background_color": "#ce021e",
+            "sale_label_color": "#ffffff"
+          }
+        },
+        "promotion_GaeEgH": {
+          "type": "promotion",
+          "settings": {
+            "image_link": "",
+            "open_new_window": false,
+            "show_sound_control": false,
+            "video_url": "",
+            "enable_video_autoplay": false,
+            "video_alt_text": "",
+            "enable_content_overlay": true,
+            "content_position": "bottom",
+            "overlay_opacity": 10,
+            "number_of_columns": 1,
+            "number_of_row": 1,
+            "icon": "none",
+            "another_icon": "",
+            "icon_size": 45,
+            "sub_title": "",
+            "title": "Loyalty Program",
+            "title_size": "small",
+            "text": "<p>Collect exclusive points with every purchase.</p>",
+            "text_size": "medium",
+            "highlight_effect": "marker",
+            "text_transform": "none",
+            "button_label": "Join & Verify Now",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "text-link",
+            "text_align": "left",
+            "media_position": "top",
+            "line_1": "",
+            "line_1_size": "medium",
+            "line_2": "",
+            "line_2_size": "medium",
+            "line_3": "",
+            "line_3_size": "medium",
+            "sale_label_position": "top-left",
+            "sale_label_style": "circle",
+            "color_scheme_light": "",
+            "color_scheme_dark": "",
+            "sale_label_background_color": "#ce021e",
+            "sale_label_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "promotion_xhmE6K",
+        "promotion_GNkyHh",
+        "promotion_GaeEgH"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "medium",
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "highlight_effect": "underline",
+        "text_transform": "none",
+        "max_columns": 4,
+        "spacing": 12,
+        "height_desktop": 450,
+        "swipe_on_mobile": false,
+        "min_columns_mobile": "1",
+        "spacing_mobile": 8,
+        "height_mobile": 260,
+        "section_width": "page-width",
+        "padding_top": 16,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "color_scheme_light": "scheme-1",
+        "color_scheme_dark": ""
+      }
+    },
+    "text_columns_with_icons_9jVrVX": {
+      "type": "text-columns-with-icons",
+      "blocks": {
+        "column_EKQG8C": {
+          "type": "column",
+          "settings": {
+            "icon": "quality",
+            "another_icon": "",
+            "title": "Quality and Saving",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": "small",
+            "text": "<p>Comprehensive quality control and affordable prices.</p>",
+            "highlight_effect": "underline",
+            "text_transform": "none"
+          }
+        },
+        "column_HQeBhY": {
+          "type": "column",
+          "settings": {
+            "icon": "express-shipping",
+            "another_icon": "",
+            "title": "Fast Shipping",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": "small",
+            "text": "<p>Fast and convenient door to door delivery.</p>",
+            "highlight_effect": "underline",
+            "text_transform": "none"
+          }
+        },
+        "column_fDYUpR": {
+          "type": "column",
+          "settings": {
+            "icon": "money-back",
+            "another_icon": "",
+            "title": "Payment Security",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": "small",
+            "text": "<p>More than 10 different secure payment methods.</p>",
+            "highlight_effect": "underline",
+            "text_transform": "none"
+          }
+        },
+        "column_dxQatj": {
+          "type": "column",
+          "settings": {
+            "icon": "sustainable",
+            "another_icon": "",
+            "title": "Have Questions?",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": "small",
+            "text": "<p>24/7 Customer Service - We’re here and happy to help!</p>",
+            "highlight_effect": "underline",
+            "text_transform": "none"
+          }
+        }
+      },
+      "block_order": [
+        "column_EKQG8C",
+        "column_HQeBhY",
+        "column_fDYUpR",
+        "column_dxQatj"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "medium",
+        "heading_tag": "h2",
+        "highlight_effect": "underline",
+        "text_transform": "none",
+        "border_column": "line_vertical",
+        "column_content_alignment": "center",
+        "icon_position": "above",
+        "icon_size": 40,
+        "enable_desktop_slider": true,
+        "swipe_on_mobile": false,
+        "change_bar_every": 0,
+        "show_navigation_arrows": true,
+        "column_layout_desktop": 5,
+        "section_height_desktop": "md:py-0",
+        "spacing_desktop": 48,
+        "column_layout_mobile": "2",
+        "section_height_mobile": "py-0",
+        "spacing_mobile": 26,
+        "section_width": "page-width",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "show_section_divider": false,
+        "color_scheme_light": "",
+        "background_color_light": "rgba(0,0,0,0)",
+        "color_icon_light": "rgba(0,0,0,0)",
+        "color_scheme_dark": "",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "color_icon_dark": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "video_QLRBTx",
+    "main",
+    "rich_text_qRJfDJ",
+    "promotion_grid_tTY6hJ",
+    "text_columns_with_icons_9jVrVX"
+  ]
+}

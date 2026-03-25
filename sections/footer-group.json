@@ -1,0 +1,174 @@
+{
+  "name": "Footer",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "image_jEJCmt": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "number_of_columns_wide": 1,
+            "image_width": 70,
+            "link_image_footer": "",
+            "open_new_window": false,
+            "rounded_corner_image": false,
+            "alignment": "left",
+            "text": "",
+            "spacing": 4
+          }
+        },
+        "link_list_fBdAed": {
+          "type": "link_list",
+          "settings": {
+            "open_by_default": false,
+            "number_of_columns_wide": 5,
+            "heading_menu": "",
+            "menu": "main-menu",
+            "menu_desktop_layout": "horizontal"
+          }
+        },
+        "contact_jbp86U": {
+          "type": "contact",
+          "settings": {
+            "open_by_default": false,
+            "number_of_columns_wide": 1,
+            "heading_menu": "Need help",
+            "icon_1": "customer-support",
+            "another_icon_1": "",
+            "title_1": "Got questions? Call us 24/7",
+            "text_1": "1908474783",
+            "text_link_1": "",
+            "open_new_window_1": false,
+            "icon_2": "online-support",
+            "another_icon_2": "",
+            "title_2": "Need help with your order?",
+            "text_2": "Contact",
+            "text_link_2": "",
+            "open_new_window_2": false,
+            "icon_3": "live-chat",
+            "another_icon_3": "",
+            "title_3": "Available 24/7 via chat",
+            "text_3": "Chat With US",
+            "text_link_3": "",
+            "open_new_window_3": false,
+            "show_social_icons": false
+          }
+        },
+        "link_list_TdTjqW": {
+          "type": "link_list",
+          "settings": {
+            "open_by_default": false,
+            "number_of_columns_wide": 1,
+            "heading_menu": "Help Info",
+            "menu": "",
+            "menu_desktop_layout": "vertical"
+          }
+        },
+        "link_list_9jaDpd": {
+          "type": "link_list",
+          "settings": {
+            "open_by_default": false,
+            "number_of_columns_wide": 1,
+            "heading_menu": "Trending Collections",
+            "menu": "",
+            "menu_desktop_layout": "vertical"
+          }
+        },
+        "link_list_k6qf8P": {
+          "type": "link_list",
+          "settings": {
+            "open_by_default": false,
+            "number_of_columns_wide": 1,
+            "heading_menu": "Our Policies",
+            "menu": "",
+            "menu_desktop_layout": "vertical"
+          }
+        },
+        "email_footer_3VCKXg": {
+          "type": "email_footer",
+          "settings": {
+            "open_by_default": false,
+            "number_of_columns_wide": 1,
+            "heading_email": "Get exclusive Offers and Updates",
+            "subtext_email": "<p>Join our Newsletter for Exclusive Tech Deals, Appliance Care Tips & Early Access to Offers & Deals.</p>",
+            "show_social_icons": true
+          }
+        },
+        "link_list_8B4iba": {
+          "type": "link_list",
+          "settings": {
+            "open_by_default": false,
+            "number_of_columns_wide": 5,
+            "heading_menu": "Wearables & Smart Devices",
+            "menu": "",
+            "menu_desktop_layout": "horizontal"
+          }
+        },
+        "link_list_jnDW37": {
+          "type": "link_list",
+          "settings": {
+            "open_by_default": false,
+            "number_of_columns_wide": 5,
+            "heading_menu": "Laptops & Tablets",
+            "menu": "",
+            "menu_desktop_layout": "horizontal"
+          }
+        },
+        "link_list_q6dFHM": {
+          "type": "link_list",
+          "settings": {
+            "open_by_default": false,
+            "number_of_columns_wide": 5,
+            "heading_menu": "Home Appliances",
+            "menu": "",
+            "menu_desktop_layout": "horizontal"
+          }
+        },
+        "subfooter_cEETBB": {
+          "type": "subfooter",
+          "settings": {
+            "show_block_divider": true,
+            "show_payment_icons": true,
+            "payment_icon": "visa , master , diners_club , paypal , american_express",
+            "show_copyright": true,
+            "show_powered_by": true,
+            "custom_copyright_text": "",
+            "padding_top": 20,
+            "padding_bottom": 20,
+            "enable_country_selector": true,
+            "enable_language_selector": true,
+            "enable_follow_on_shop": false
+          }
+        }
+      },
+      "block_order": [
+        "image_jEJCmt",
+        "link_list_fBdAed",
+        "contact_jbp86U",
+        "link_list_TdTjqW",
+        "link_list_9jaDpd",
+        "link_list_k6qf8P",
+        "email_footer_3VCKXg",
+        "link_list_8B4iba",
+        "link_list_jnDW37",
+        "link_list_q6dFHM",
+        "subfooter_cEETBB"
+      ],
+      "settings": {
+        "number_of_columns": 5,
+        "spacing": 32,
+        "content_alignment": "left",
+        "hide_footer_on_page": "",
+        "section_width": "full-width",
+        "top_padding": 48,
+        "bottom_padding": 0,
+        "show_section_divider": false
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

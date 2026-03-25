@@ -1,0 +1,68 @@
+<div
+  class="product-info__quantity-wrapper {{ content_center_class }}"
+  data-block-id="{{ block.id }}"
+>
+  <div
+    class="flex flex-col gap-1.5 h-full{% unless block_buy_buttons %} mb-[var(--padding-bottom-product-template-block)]{% endunless %}"
+    x-data="xQuantitySelector('{{ section.id }}', '{{ current_variant.id }}', '{{ product.url }}'{% if product.quantity_price_breaks_configured? %}, true{% endif %})"
+    {% if product.quantity_price_breaks_configured? %}
+      x-init="handleInit()"
+    {% else %}
+      x-intersect.once.margin.200px="handleInit()"
+    {% endif %}
+  >
+    <label
+      class="quantity-selector__label__{{ section.id }} h5 md:h6{% if block_buy_buttons %} hidden{% endif %}"
+      for="Quantity-{{ block_id }}"
+    >
+      <span>{{ 'products.product.quantity.label' | t }} </span>
+    </label>
+    <div class="w-full h-full flex{% if show_content_center %} justify-center{% endif %}">
+      <div
+        class="flex color-text-[rgba(var(--color-heading),0.8)] w-fit items-center
+          {%- if settings.edges_type == 'rounded_corners' %} rounded-md{% endif -%}
+          {%- if block_buy_buttons %} border color-border-[rgba(var(--color-text),0.2)]{% else %} outline outline-1 color-outline-[rgba(var(--color-text),0.2)]{% endif -%}"
+      >
+        <div
+          class="flex justify-center items-center cursor-pointer pt-3 pb-3 bg-transparent select-none
+            {%- if block_buy_buttons %} px-4 md:p-4{% else %} pl-5 pr-5 quick-view:pr-3 quick-view:pl-3{% endif -%}"
+          name="minus"
+          @click.prevent="minus(1)"
+          @keyup.enter="minus(1)"
+          tabindex="0"
+          role="button"
+          aria-label="{{ "accessibility.minus" | t }}"
+        >
+          <span class="w-3 h-3 flex color-text-[rgba(var(--color-text))]">{% render 'icon-all', icon: 'icon-minus' %}</span>
+        </div>
+        <input
+          class="outer-spin-button color-text-[rgba(var(--color-text))] focus:outline-none text-medium text-center bg-transparent rounded-corners py-2.5 md:py-3 w-8 quick-view:w-7"
+          type="number"
+          {% if block_id == last_block_has_qty_box %}
+            name="quantity"
+          {% endif %}
+          id="Quantity-{{ block_id }}"
+          min="1"
+          value="1"
+          form="{{ product_form_id }}"
+          x-model="qty"
+          x-on:blur="invalid($el)"
+          x-ref="quantity_input"
+          aria-label="{{ "products.product.quantity.label" | t }}"
+        >
+        <div
+          class="flex justify-center items-center cursor-pointer pt-3 pb-3 bg-transparent select-none
+            {%- if block_buy_buttons %} px-4 md:p-4{% else %} pl-5 pr-5 quick-view:pr-3 quick-view:pl-3{% endif -%}"
+          name="plus"
+          @click.prevent="plus(1)"
+          @keyup.enter="plus(1)"
+          tabindex="0"
+          role="button"
+          aria-label="{{ "accessibility.plus" | t }}"
+        >
+          <span class="flex h-3 w-3 color-text-[rgba(var(--color-text))]">{% render 'icon-all', icon: 'icon-plus' %}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div 
+  x-data='{ 
+    storeAvailabilites: {
+      {%- for store in product.selected_or_first_available_variant.store_availabilities -%}
+        {%- if store.pick_up_enabled %}
+          {{- store.location.name | json }}: {{ store.available }}{% unless forloop.last %},{% endunless %}
+        {%- endif %}
+      {%- endfor -%}
+    },
+    pickupLocation: [
+      {%- for store in product.selected_or_first_available_variant.store_availabilities -%}
+        {{ store.location.name | escape | json }}{% unless forloop.last %},{% endunless %}
+      {%- endfor -%}
+    ]
+  }'
+  class="pickup-message__wrapper -mt-1.5 mb-3"
+  x-show="$store.xStoreMap?.currentStoreSelected && pickupLocation.includes($store.xStoreMap?.getStore())"
+>
+  <div x-show="$store.xStoreMap?.checkAvailability(storeAvailabilites)" class="text-available text-x-small border border-dashed p-1 flex flex-row rtl:flex-row-reverse items-center gap-[3px] {% if settings.edges_type == 'rounded_corners' %} rounded{% endif %}">
+    <span class="flex min-w-[16px] h-4 w-4 relative">{% render 'icon-all', icon: 'icon-location' %}</span><span x-text="'{{ 'store_selector.available' | t }} ' + $store.xStoreMap?.getStoreText()"> </span>
+  </div>
+  <div x-show="!$store.xStoreMap?.checkAvailability(storeAvailabilites)" class="text-unavailable text-x-small border border-dashed p-1 flex flex-row rtl:flex-row-reverse items-center gap-[3px] {% if settings.edges_type == 'rounded_corners' %} rounded{% endif %}">
+    <span class="flex min-w-[16px] h-4 w-4 relative">{% render 'icon-all', icon: 'icon-location' %}</span><span x-text="'{{ 'store_selector.out_of_stock' | t }} ' + $store.xStoreMap?.getStoreText()"> </span>
+  </div>
+</div>

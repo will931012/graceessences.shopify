@@ -1,0 +1,431 @@
+{% liquid
+  assign is_show_custom_fields = false
+
+  if settings.show_cart_custom_field and settings.cart_custom_field_label != blank
+    assign is_show_custom_fields = true
+  endif
+%}
+
+{% if settings.cart_enable_featured_discount or settings.enable_estimate_shipping or settings.cart_show_note or settings.enable_share_cart or is_show_custom_fields %}
+  <div class="cart-drawer__custom-accordion__wrapper border-t border-solid color-border-[rgba(var(--color-line-and-border))] {% if is_rounded_conners %} rounded-[10px]{% endif %} pr-4 pl-4 md:pr-7.5 md:pl-7.5">
+    {% if is_show_custom_fields %}
+      <div
+        class="cart-drawer__custom-fields__wrapper w-full border-b border-solid accordion {% if cart.items_subtotal_price <= cart.total_price %} last-of-type:border-0{% endif %}"
+      >
+        <div
+          class="cart-drawer__custom-fields__header flex relative flex-row gap-2.5 items-center w-full pt-3 pb-3 cursor-pointer text-medium color-text-[rgba(var(--color-heading),0.8)]"
+          @click="$store.xCartHelper.openField = $store.xCartHelper.openField != 'custom_field' ? 'custom_field' : ''"
+          @keyup.enter="$store.xCartHelper.openField = $store.xCartHelper.openField != 'custom_field' ? 'custom_field' : ''"
+          tabindex="0"
+        >
+          <div class="h5 md:h6 flex-auto p-break-words">
+            {{ settings.cart_custom_field_label | escape -}}
+            {%- if settings.cart_custom_field_required %}<span class="label-required"> *</span>{% endif %}
+          </div>
+          <div
+            class="w-2.5 min-w-[10px] relative duration-500"
+            :class="$store.xCartHelper.openField == 'custom_field' ? 'rotate-180' : 'rotate-0'"
+          >
+            {% render 'icon-all', icon: 'icon-caret' %}
+          </div>
+        </div>
+        <div
+          class="cart-drawer__custom-fields__content"
+          x-show="$store.xCartHelper.openField == 'custom_field'"
+          x-collapse
+        >
+          {%- capture cart_fiedls_data -%}
+            {
+            "custom_field_label": "{{ settings.cart_custom_field_label | escape }}",
+            "custom_field_required": {{ settings.cart_custom_field_required | default: false }},
+            "custom_field_pattern": "{{ settings.cart_custom_field_pattern | escape }}"
+            }
+          {%- endcapture %}
+          <div
+            class="pb-3"
+            x-data="xCartFields($el)"
+            data-cart-custom-field="{{ cart_fiedls_data | escape }}"
+          >
+            <label
+              class="hidden"
+              for="CartDrawer__CustomField"
+            >
+              {{- settings.cart_custom_field_label -}}
+            </label>
+            <input
+              id="CartDrawer__CustomField"
+              type="text"
+              {% if settings.cart_custom_field_required %}
+                :class="customFieldError && 'color-border-[rgba(var(--error-message-color))]'"
+              {% endif %}
+              class="w-full px-4 py-3.5 border border-solid color-bg-[var(--element-background)] focus-within:outline-none placeholder:text-current placeholder:opacity-60{% if settings.edges_type == 'rounded_corners' %} !rounded-md{% endif %}"
+              placeholder="{{ settings.cart_custom_field_label }}"
+              @input.debounce.500ms="handleChangeInput($event)"
+              x-model="customField"
+            >
+            {% if settings.cart_custom_field_required %}
+              <p
+                x-cloak
+                x-show="customFieldError"
+                class="flash-message error-message mt-2"
+              >
+                {{ 'sections.cart.required_cart_note' | t }}
+                {{ settings.cart_custom_field_label }}
+              </p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+    {% if settings.cart_show_note %}
+      <div
+        class="cart-drawer__cart-note__wrapper w-full border-b border-solid accordion {% if cart.items_subtotal_price <= cart.total_price %} last-of-type:border-0{% endif %}"
+      >
+        <div
+          class="cart-drawer__cart-note__header flex relative flex-row gap-2.5 items-center w-full pt-3 pb-3 cursor-pointer text-medium color-text-[rgba(var(--color-heading),0.8)]"
+          @click="$store.xCartHelper.openField = $store.xCartHelper.openField != 'cart_note' ? 'cart_note' : ''"
+          @keyup.enter="$store.xCartHelper.openField = $store.xCartHelper.openField != 'cart_note' ? 'cart_note' : ''"
+          tabindex="0"
+        >
+          <div class="h5 md:h6 flex-auto p-break-words">{{ 'general.cart.note' | t }}</div>
+          <div
+            class="w-2.5 min-w-[10px] relative duration-500"
+            :class="$store.xCartHelper.openField == 'cart_note' ? 'rotate-180' : 'rotate-0'"
+          >
+            {% render 'icon-all', icon: 'icon-caret' %}
+          </div>
+        </div>
+        <div
+          class="cart-drawer__cart-note__content"
+          x-show="$store.xCartHelper.openField === 'cart_note'"
+          x-collapse
+        >
+          <div class="pb-3">
+            <textarea
+              id="x-cart-note"
+              rows="4"
+              cols="50"
+              class="w-full pl-4 pr-4 pt-4 pb-4 border border-solid color-bg-[var(--element-background)] focus-within:outline-none placeholder:text-current placeholder:opacity-60{% if settings.edges_type == 'rounded_corners' %} !rounded-md{% endif %}"
+              placeholder="{{ 'general.cart.cart_note_label' | t }}"
+              @change="$store.xCartHelper.updateCart({ note: $el.value})"
+            >{{- cart.note -}}</textarea>
+            <label
+              for="x-cart-note"
+              class="hidden"
+            >
+              {{- 'general.cart.cart_note_label' | t -}}
+            </label>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+    {% if settings.cart_enable_featured_discount or settings.enable_estimate_shipping or settings.enable_share_cart %}
+      <div class="w-full block pt-3 pb-1.5 gap-5 text-medium color-text-[rgba(var(--color-heading),0.8)] {% if cart.items_subtotal_price <= cart.total_price %} last-of-type:border-0{% endif %} border-b border-solid color-border-[rgba(var(--color-line-and-border))]">
+        <div
+          class="grid auto-rows-auto grid-flow-col auto-cols-max gap-5 overflow-x-auto scrollbar-horizontal pb-1.5"
+          style="font-family: var(--heading-font-family);"
+        >
+          {% if settings.cart_enable_featured_discount %}
+            <div
+              class="cart-drawer__featured-discount-button inline-flex flex-row gap-1 items-end cursor-pointer font-base-heading focus-visible:-outline-offset-1"
+              @click.prevent="$store.xCartHelper.openField = 'discount_field';"
+              @keyup.enter="$store.xCartHelper.openField = 'discount_field';"
+              tabindex="0"
+            >
+              <div class="w-5 h-full justify-center">{% render 'icon-all', icon: 'icon-sale' %}</div>
+              <div>{{ 'general.cart.discount' | t }}</div>
+            </div>
+          {% endif %}
+
+          {% if settings.enable_estimate_shipping %}
+            <div
+              class="cart-drawer__estimate-shipping-button inline-flex flex-row gap-1 items-end cursor-pointer focus-visible:-outline-offset-1"
+              @click.prevent="$store.xCartHelper.openField = 'estimate_shipping'"
+              @keyup.enter="$store.xCartHelper.openField = 'estimate_shipping'"
+              tabindex="0"
+            >
+              <div class="w-5 h-full justify-center">{% render 'icon-all', icon: 'icon-delivery' %}</div>
+              <div>{{ 'shipping.estimate' | t }}</div>
+            </div>
+          {% endif %}
+
+          {% if settings.enable_share_cart %}
+            <div
+              class="cart-drawer__share-cart-button inline-flex flex-row gap-1 items-end cursor-pointer focus-visible:-outline-offset-1"
+              @click.stop="$store.xCartHelper.openField = 'share_cart'"
+              @keyup.enter="$store.xCartHelper.openField = 'share_cart'"
+              tabindex="0"
+            >
+              <div class="w-5 h-full justify-center">{% render 'icon-all', icon: 'icon-share' %}</div>
+              <div>{{ 'general.cart.share_cart' | t }}</div>
+            </div>
+          {% endif %}
+        </div>
+        <div
+          x-data="{isShow: false}"
+          x-intersect.once.margin.200px="isShow = true"
+        >
+          <div
+            id="CartDrawerFields__Overlay"
+            class="absolute color-bg-[rgba(var(--color-overlay))] opacity-80 top-0 right-0 bottom-0 left-0 z-30 {% if settings.edges_type == 'rounded_corners' %} rounded-[var(--border-radius-drawer)]{% endif %}"
+            :class="['discount_field', 'estimate_shipping', 'share_cart'].includes($store.xCartHelper.openField) ? '': 'hidden'"
+            @click.prevent="$store.xCartHelper.closeField();"
+          ></div>
+
+          <template x-if="isShow">
+            <div
+              class="cart-drawer__field fixed md:absolute color-bg-gradient-[var(--gradient-background)] w-full z-[31] left-0 top-0 {% if is_rounded_conners %} rounded-t-[var(--border-radius-drawer)] md:rounded-[var(--border-radius-drawer)]{% endif %} pb-5 md:pb-7.5 flex flex-col gap-4 md:gap-6 border-t border-solid color-border-[rgba(var(--color-line-and-border))]"
+              :class="['discount_field', 'estimate_shipping', 'share_cart'].includes($store.xCartHelper.openField) ? 'is-open' : ''"
+              x-bind:inert="!['discount_field', 'estimate_shipping', 'share_cart'].includes($store.xCartHelper.openField)"
+              x-intersect.full="$store.xFocusElement.trapFocus('CustomAccordionWrapper', 'CloseCustomAccordion')"
+              @keyup.escape.prevent.stop="$store.xCartHelper.closeField()"
+              id="CustomAccordionWrapper"
+            >
+              <div class="w-full flex flex-col">
+                <button
+                  id="CloseCustomAccordion"
+                  class="modal__button-close"
+                  @click="$store.xCartHelper.closeField()"
+                  @keyup.enter="$store.xCartHelper.closeField()"
+                  @keydown.enter.prevent
+                  aria-label="{{ 'accessibility.close' | t }}"
+                >
+                  <span class="button__close icon-close-medium-desktop icon-close-large-mobile">{% render 'icon-all', icon: 'icon-close' %}</span>
+                </button>
+                <div class="flex-auto text-center md:text-start px-4 md:px-7.5">
+                  <div x-data="xScrollNav" class="scroll-container relative flex justify-center whitespace-nowrap overflow-hidden">
+                    <span x-show="show" x-cloak class="relative w-10 h-10 p-3 shrink-0 cursor-pointer duration-300 inline-block ltr:rotate-180" 
+                      @click="scrollToLeft()"
+                      :class="isAtStart && 'opacity-40 cursor-not-allowed'"
+                      :disabled="isAtStart"
+                    >
+                      {% render 'icon-all', icon: 'icon-pagination-right' %}
+                    </span>
+                    <div class="nav-content overflow-hidden">
+                      <div
+                        x-init="
+                          $watch('$store.xCartHelper.openField', (value, oldValue) => {
+                            if (show && !oldValue && ['discount_field', 'estimate_shipping', 'share_cart'].includes(value)) {
+                              scrollToActiveItem()
+                            }
+                          })
+                        "
+                        x-intersect.once="$store.xHelper.dragToScroll($el);" 
+                        class="flex gap-0.5 link-list items-center overflow-x-auto scrollbar-hidden"
+                      >
+                        {% if settings.cart_enable_featured_discount %}
+                          <div class="cart-drawer__field__title block-text-button__wrapper pt-1.5 pb-1.5 pl-3 pr-3 disable-button-tap-highlight focus-visible:-outline-offset-1"
+                              id="cartDrawerFieldDiscount"
+                              @click.prevent="$store.xCartHelper.openField = 'discount_field'; $store.xCartHelper.isCopiedCart = false;"
+                              @keyup.enter="$store.xCartHelper.openField = 'discount_field'; $store.xCartHelper.isCopiedCart = false;"
+                              tabindex="0"
+                              x-bind:class="$store.xCartHelper.openField === 'discount_field' ? 'is-active font-semibold' : ''"
+                          >
+                            <div class="block-text-button__container">
+                              <span class="block-text-button-text-active-invisible md:whitespace-nowrap md:line-clamp-none">{{ 'general.cart.discount' | t }}</span>
+                              <span class="block-text-button-text-effect-1 md:md:whitespace-nowrap md:line-clamp-none">{{ 'general.cart.discount' | t }}</span>
+                              <span class="block-text-button-text-effect-2 md:whitespace-nowrap md:line-clamp-none">{{ 'general.cart.discount' | t }}</span>
+                            </div>
+                          </div>
+                        {% endif %}
+                        {% if settings.enable_estimate_shipping %}
+                          <div class="cart-drawer__field__title block-text-button__wrapper pt-1.5 pb-1.5 pl-3 pr-3 disable-button-tap-highlight focus-visible:-outline-offset-1"
+                              id="cartDrawerFieldEstimateShipping"
+                              @click.prevent="$store.xCartHelper.openField = 'estimate_shipping'; $store.xCartHelper.isCopiedCart = false;"
+                              @keyup.enter="$store.xCartHelper.openField = 'estimate_shipping'; $store.xCartHelper.isCopiedCart = false;"
+                              tabindex="0"
+                              x-bind:class="$store.xCartHelper.openField === 'estimate_shipping' ? 'is-active font-semibold' : ''"
+                          >
+                            <div class="block-text-button__container">
+                              <span class="block-text-button-text-active-invisible">{{ 'shipping.estimate' | t }}</span>
+                              <span class="block-text-button-text-effect-1 md:whitespace-nowrap md:line-clamp-none">{{ 'shipping.estimate' | t }}</span>
+                              <span class="block-text-button-text-effect-2 md:whitespace-nowrap md:line-clamp-none">{{ 'shipping.estimate' | t }}</span>
+                            </div>
+                          </div>
+                        {% endif %}
+                        {% if settings.enable_share_cart %}
+                          <div class="cart-drawer__field__title block-text-button__wrapper pt-1.5 pb-1.5 pl-3 pr-3 disable-button-tap-highlight focus-visible:-outline-offset-1"
+                              id="cartDrawerFieldShareCart"
+                              @click.prevent="$store.xCartHelper.openField = 'share_cart'"
+                              @keyup.enter="$store.xCartHelper.openField = 'share_cart'"
+                              tabindex="0"
+                              x-bind:class="$store.xCartHelper.openField === 'share_cart' ? 'is-active font-semibold' : ''"
+                          >
+                            <div class="block-text-button__container">
+                              <span class="block-text-button-text-active-invisible">{{ 'general.cart.share_cart' | t }}</span>
+                              <span class="block-text-button-text-effect-1 md:whitespace-nowrap md:line-clamp-none">{{ 'general.cart.share_cart' | t }}</span>
+                              <span class="block-text-button-text-effect-2 md:whitespace-nowrap md:line-clamp-none">{{ 'general.cart.share_cart' | t }}</span>
+                            </div>
+                          </div>
+                        {% endif %}
+                      </div>
+                    </div>
+                    <span x-show="show" x-cloak class="relative w-10 h-10 p-3 shrink-0 cursor-pointer duration-300 inline-block rtl:rotate-180"
+                      @click="scrollToRight()"
+                      :class="isAtEnd && 'opacity-40 cursor-not-allowed'"
+                      :disabled="isAtEnd"
+                    >
+                      {% render 'icon-all', icon: 'icon-pagination-right' %}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="relative flex-auto mx-4 md:mx-7.5">
+                {% if settings.cart_enable_featured_discount %}
+                  <div
+                    x-data="xCouponCode"
+                    class="{% if settings.enable_estimate_shipping %}absolute {% endif %}w-full h-full animatie-duration-0"
+                    x-intersect.once="$el.classList.remove('animatie-duration-0')"
+                    :class="[
+                      $store.xCartHelper.openField === 'discount_field' ? 'opacity-100 anm-fade' : 'opacity-0 invisible'
+                    ]"                        
+                  >
+                    <div class="flex pt-1 pb-1 pl-1 pr-1 border border-solid color-border-[rgba(var(--color-line-and-border))] {% if is_rounded_conners %} rounded-md{% endif %}">
+                      <div class="grow">
+                        <label
+                          class="hidden"
+                          for="CartDrawer__DiscountField"
+                        >
+                          {{- 'general.cart.discount_code' | t -}}
+                        </label>
+                        <input
+                          id="CartDrawer__DiscountField"
+                          type="text"
+                          class="w-full pl-5 pr-5 pt-2.5 pb-2.5 focus:outline-none focus-within:outline-none focus:border-0 bg-transparent placeholder:text-current placeholder:opacity-60 "
+                          placeholder="{{ 'general.cart.placeholder_discount' | t }}"
+                          @change="onChange()"
+                          @keyup.enter="applyDiscountToCart('{{ section.id }}')"
+                        >
+                      </div>
+                      <custom-button>
+                        <button
+                          @click="applyDiscountToCart('{{ section.id }}')"
+                          class="button button-primary p-break-words inline-block empty:hidden whitespace-nowrap cursor-pointer pointer-events-auto {% if is_rounded_conners %} rounded-md{% endif %}"
+                        >
+                          <span :class="{ 'lg:block opacity-0 is-focus-button' : loading }">
+                            <span class="flex items-center justify-center">
+                              {% assign button_label = 'general.cart.apply' | t %}
+                              {% render 'button-label', button_label: button_label, show_button_style: 'primary' %}
+                            </span>
+                          </span>
+  
+                          <div
+                            class="lg:inline-block animate-spin w-4 h-4 md:w-5 md:h-5 absolute top-[calc(50%-8px)] left-[calc(50%-8px)] md:top-[calc(50%-10px)] md:left-[calc(50%-10px)]"
+                            x-show="loading"
+                            x-cloak
+                          >
+                            {% render 'icon-all', icon: 'icon-loading' %}
+                          </div>
+                        </button>
+                      </custom-button>
+                    </div>
+                    <p
+                      x-show="$store.xCouponCodeDetail.discountFailed"
+                      x-cloak
+                      class="flash-message error-message mt-2"
+                    >
+                      {{ 'general.cart.discount_wrong' | t }}
+                    </p>
+                    <p
+                      x-show="$store.xCouponCodeDetail.discountApplied"
+                      x-cloak
+                      class="flash-message error-message mt-2"
+                    >
+                      {{ 'general.cart.discount_applied' | t }}
+                    </p>
+                    <p
+                      x-show="$store.xCouponCodeDetail.discountCorrect"
+                      x-cloak
+                      class="flash-message success-message mt-2"
+                    >
+                      {{ 'general.cart.discount_correct' | t }}
+                    </p>
+                  </div>
+                {% endif %}
+
+                {% if settings.enable_estimate_shipping %}
+                  <div
+                    class="w-full h-full overflow-auto scrollbar-body scrollbar-visible animatie-duration-0"
+                    x-intersect.once="$el.classList.remove('animatie-duration-0')"
+                    :class="[
+                      $store.xCartHelper.openField === 'estimate_shipping' ? 'opacity-100 anm-fade' : 'opacity-0 invisible'
+                    ]"
+                  >
+                    {% render 'estimate-shipping-rate', is_cart_drawer: true %}
+                  </div>
+                {% endif %}
+
+                {% if settings.enable_share_cart %}
+                  <div
+                    class="{% if settings.enable_estimate_shipping or settings.cart_enable_featured_discount %}absolute {% endif %}top-0 w-full h-full animatie-duration-0"
+                    x-intersect.once="$el.classList.remove('animatie-duration-0')"
+                    :class="[
+                      $store.xCartHelper.openField === 'share_cart' ? 'opacity-100 anm-fade' : 'opacity-0 invisible'
+                    ]"
+                  >
+                    <div class="flex pt-1 pb-1 pl-1 pr-1 border border-solid color-border-[rgba(var(--color-line-and-border))] {% if is_rounded_conners %} rounded-md{% endif %}">
+                      <div class="grow">
+                        <label
+                          for="cart-share"
+                          class="hidden"
+                        >
+                          {{- 'general.cart.copy' | t -}}
+                        </label>
+                        <input
+                          type="text"
+                          placeholder="cart/?="
+                          autocorrect="off"
+                          autocapitalize="off"
+                          id="cart-share"
+                          class="w-full pl-5 pr-5 pt-2.5 pb-2.5 focus:outline-none focus-within:outline-none focus:border-0 bg-transparent placeholder:text-current placeholder:opacity-60"
+                          x-intersect.once.margin.200px.once="$store.xCartHelper.generateUrl()"
+                          :value="$store.xCartHelper.cartShareUrl"
+                        >
+                      </div>
+                      <custom-button>
+                        <button
+                          @click="$store.xCartHelper.copyURL($el)"
+                          class="button button-primary p-break-words inline-block empty:hidden cursor-pointer pointer-events-auto whitespace-nowrap {% if is_rounded_conners %} rounded-md{% endif %}"
+                          x-text="$store.xCartHelper.isCopiedCart ? '{{ 'general.cart.copied' | t }}' : '{{ 'general.cart.copy' | t }}'"
+                        >
+                        </button>
+                      </custom-button>
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+
+              <div
+                class="element-end-modal h-0 w-0 absolute pointer-events-none"
+                tabindex="0"
+                @focus="document.getElementById('CloseCustomAccordion')?.focus()">
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+  {%- if settings.cart_enable_featured_discount -%}
+    <script
+      src="{{ 'coupon-code.js' | asset_url }}"
+      defer
+    ></script>
+  {%- endif -%}
+
+  {%- if settings.show_cart_custom_field and settings.cart_custom_field_label != blank -%}
+    <script
+      src="{{ 'cart-fields.js' | asset_url }}"
+      defer
+    ></script>
+  {%- endif -%}
+  {% if settings.enable_estimate_shipping %}
+    <script
+      src="{{ 'estimate-shipping-rate.js' | asset_url }}"
+      defer
+    ></script>
+  {% endif %}
+{% endif %}

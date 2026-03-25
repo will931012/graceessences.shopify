@@ -1,0 +1,209 @@
+{%- liquid
+  assign rtl = false
+
+  if settings.lang_direction contains request.locale.iso_code
+    assign rtl = true
+  endif
+%}
+<!doctype html>
+<html class="maximize-theme no-js{% if settings.theme_mode_default == "dark" %} dark{% endif %} {% if settings.img_hover_anm == 'zoom_out' %} img-hover-zo{% endif %}"
+      lang="{{ request.locale.iso_code }}"
+      dir="{% if rtl %}rtl{% else %}ltr{% endif %}"
+>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="">
+  {% if settings.show_canonical_url_collection and template.name == "collection" %}
+    <link rel="canonical" href="{{ canonical_url | split: '?' | first }}">
+  {% else %}
+    <link rel="canonical" href="{{ canonical_url }}">
+  {% endif %}
+
+  {%- if settings.favicon != blank -%}
+    <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+  {%- endif -%}
+
+  {%- unless settings.header_font.system? and settings.body_font.system? -%}
+    <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+  {%- endunless -%}
+
+  <title>
+    {{ page_title }}
+    {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+    {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+    {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+  </title>
+
+  {%- if settings.enable_organization_schema and template.name == 'index' -%}
+    {% liquid
+      if settings.business_address_1 != nil
+        assign first_business_addr = settings.business_address_1 | split: ","
+      endif
+      if settings.business_address_2 != nil
+        assign second_business_addr = settings.business_address_2 | split: ","
+      endif
+    %}
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "{{ settings.site_type }}",
+          "name": "{{ settings.business_name }}",
+          "description": "{{ settings.business_description }}",
+      {% if settings.business_logo != blank %}
+          "logo": {{ settings.business_logo | image_url: width: 112 | prepend: "https:" | json }},
+          {% endif %}
+      "telephone": "{{ settings.business_phone }}",
+          "address": [{
+            "@type": "PostalAddress",
+            "streetAddress": "{{ first_business_addr[0] }}",
+            "addressLocality": "{{ first_business_addr[1] }}",
+            "addressRegion": "{{ first_business_addr[2] }}",
+            "postalCode": "{{ first_business_addr[3] }}",
+            "addressCountry": "{{ first_business_addr[4] }}"
+          },{
+            "streetAddress": "{{ second_business_addr[0] }}",
+            "addressLocality": "{{ second_business_addr[1] }}",
+            "addressRegion": "{{ second_business_addr[2] }}",
+            "postalCode": "{{ second_business_addr[3] }}",
+            "addressCountry": "{{ second_business_addr[4] }}"
+          }],
+          "email": "{{ settings.business_email }}",
+          "foundingDate": "{{ settings.founded_on }}"
+        }
+    </script>
+  {%- endif -%}
+
+  {% if page_description %}
+    <meta name="description" content="{{ page_description | escape }}">
+  {% endif %}
+
+  {% liquid
+    render 'meta-tags'
+    render 'font-face'
+    echo 'theme.css' | asset_url | stylesheet_tag: preload: true
+    render 'css-variables'
+    render 'theme-mode-control'
+  %}
+  {% if rtl %}
+    {% liquid
+      echo 'rtl.css' | asset_url | stylesheet_tag: preload: true
+    %}
+  {% endif %}
+  {{ 'buttons.css' | asset_url | stylesheet_tag: preload: true }}
+  {% if request.page_type == 'policy' %}
+    {{ 'page.css' | asset_url | stylesheet_tag: preload: true }}
+  {% endif %}
+  {% if template.name == "product" %}
+    {{ 'product-details.css' | asset_url | stylesheet_tag }}
+  {% endif %}
+  <script src="{{ 'constants.js' | asset_url }}" defer></script>
+  {{ content_for_header }}
+  {{ settings.additional_head }}
+</head>
+<body
+    class="gradient scrollbar-body overflow-x-hidden min-h-screen"
+    {% if request.design_mode and template == "index" %}
+      x-init="$store.xCc.load('{{ shop.url }}','{{ shop.email }}','{{ settings.selected_preset }}', '{{ shop.id }}')"
+    {% endif %}
+    x-data
+>
+<div class="main-content__wrapper flex flex-col min-h-screen">
+  <a class="skip-to-content button button-skip-to-content focus-visible:z-60" href="#MainContent">
+    {{ 'accessibility.skip_to_text' | t }}
+  </a>
+
+  {% sections 'header-group' %}
+  {% sections 'aside-group' %}
+
+  <main id="MainContent"
+        class="content-for-layout focus-none outline-none grow theme-template-{{ template.name }} theme-template-suffix-{{ template.suffix | default: 'none' }}"
+        role="main" tabindex="-1"
+        x-init="$store.xCartHelper.handleSharedCart();"
+  >
+    {{ content_for_layout }}
+  </main>
+
+  {% sections 'footer-group' %}
+
+  {% render 'popups' %}
+
+  {% if settings.enable_scroll_top_desktop or settings.enable_scroll_top_mobile %}
+    {% render 'scroll-to-top' %}
+  {% endif %}
+
+  {% if theme.role == 'demo' and request.design_mode %}
+    {% render 'quick-help-popup' %}
+  {% endif %}
+
+  <ul hidden>
+    <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}
+    </li>
+    <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}
+    </li>
+  </ul>
+  
+  <script>
+    window.Maximize = {
+      sliderScript: '{{ 'swiffy-slider.js' | asset_url }}',
+      loadedScript: [],
+      cart_add_url: '{{ routes.cart_add_url }}',
+      variantStrings: {
+        addToCart: `{{ 'products.product.add_to_cart' | t }}`,
+        soldOut: `{{ 'products.product.sold_out' | t }}`,
+        unavailable: `{{ 'products.product.unavailable' | t }}`,
+      },
+      routes: {
+        addToCart: '{{ routes.cart_add_url }}',
+        cartChange: '{{ routes.cart_change_url }}',
+        cartUpdate: '{{ routes.cart_update_url }}',
+        cart: '{{ routes.cart_url }}',
+        search_url: '{{ routes.search_url }}',
+        predictiveSearch: '{{ routes.predictive_search_url }}',
+        productRecommendations: '{{ routes.product_recommendations_url }}'
+      },
+      isCartPage: {% if template.name == 'cart' %}true{% else %}false{% endif %},
+      cartProperties: {
+        additionalFee: '_item_id'
+      },
+      isProductPage: {% if template.name == 'product' %}true{% else %}false{% endif %},
+      rtl: {{ rtl }},
+      isDesignMode: {%- if request.design_mode -%}true{%- else -%}false{%- endif -%},
+      hasMousePointer: window.matchMedia('(hover: hover)').matches,
+      giftWrappingVariantId: {% if settings.gift_wrapping_product.selected_or_first_available_variant.available %}{{ settings.gift_wrapping_product.selected_or_first_available_variant.id }}{% else %}false{% endif %},
+      enableCurrencyCode: {{ settings.currency_code_enable }},
+      currencyFormat: '{% if settings.currency_code_enable %}{{ shop.money_with_currency_format }}{% else %}{{ shop.money_format }}{% endif %}',
+      isShowPopupOverlay: {{ settings.show_popup_overlay }},
+      checkFileNotLoaded: function () {
+        const fileName = document.currentScript.src.split('/').pop().split('?')[0];
+        if (!window.Maximize.loadedScript.includes(fileName)) {
+          window.Maximize.loadedScript.push(fileName)
+          return true;
+        } else {
+          return false;
+        }
+      },
+      buttonHoverAnm: '{{ settings.button_hover_animation }}'
+    };
+  </script>
+
+  {%- if request.design_mode -%}
+    <script src="{{ 'theme-editor.js' | asset_url }}" defer></script>
+    <script src="{{ 'theme-editor-alpine-custom.js' | asset_url }}" defer></script>
+  {%- endif -%}
+  <script src="{{ 'theme.js' | asset_url }}" defer></script>
+  <script src="{{ 'cart.js' | asset_url }}" defer></script>
+  <script src="{{ 'swiffy-slider.js' | asset_url }}" defer></script>
+  <script src="{{ 'header.js' | asset_url }}" defer></script>
+  <script src="{{ 'animation-card.js' | asset_url }}" defer></script>
+  <script src="{{ 'vendors.js' | asset_url }}" defer></script>
+  <script>
+    window.addEventListener("load", (event) => {
+      deferScriptLoad('instant.page', '{{ 'instant.page.v5.1.1.js' | asset_url }}', () => {
+      }, true);
+    });
+  </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+{% liquid
+	assign low_stock_threshold = settings.low_stock_threshold | plus: 0
+	assign inventory_quantity = variant.inventory_quantity
+	assign inventory_policy = variant.inventory_policy
+	assign inventory_management = variant.inventory_management
+	assign percentage_stock_indicator_bar = 100
+%}
+
+{% liquid
+	if inventory_management == 'shopify'
+		if inventory_quantity > 0
+			if inventory_quantity <= low_stock_threshold
+				assign inventory_status = 'low-stock'
+				assign percentage_stock_indicator_bar = inventory_quantity | times: 100 | divided_by: low_stock_threshold
+				assign inventory_text = 'products.product.inventory_status.low_stock' | t
+
+				if settings.low_stock_message != blank
+					assign inventory_text = settings.low_stock_message | replace: '{qty}', inventory_quantity
+				endif
+			else
+				assign inventory_status = 'in-stock'
+				assign inventory_text = 'products.product.inventory_status.in_stock' | t
+				if settings.in_stock_message != blank
+					assign inventory_text = settings.in_stock_message | replace: '{qty}', inventory_quantity
+				endif
+			endif
+		else
+			if inventory_policy == 'continue' and is_show_preorder != true
+				assign inventory_status = 'in-stock'
+				assign inventory_text = 'products.product.inventory_status.out_of_stock_continue_selling' | t
+			else
+				assign inventory_status = 'out-of-stock'
+				assign inventory_text = 'products.product.inventory_status.out_of_stock' | t
+			endif
+		endif
+	else
+		assign inventory_status = 'in-stock'
+		assign inventory_text = 'products.product.inventory_status.in_stock' | t
+	endif
+%}
+
+<div class="product-info__inventory-status" data-inventory-status="{{ inventory_status }}">
+	<span class="product-info__inventory-label text-medium flex items-center gap-1.5 {% if show_content_center %} justify-center{% endif %}" data-inventory-status="{{ inventory_status }}">
+		<span class="flex relative mr-1 ml-1">
+			<span class="product-info__inventory-dot animate-ping absolute flex h-full w-full rounded-full opacity-75"></span>
+			<span class="product-info__inventory-dot flex"></span>
+		</span>
+		<span>{{ inventory_text }}</span>
+	</span>
+	{% comment %} Hidden stock indicator bar{% endcomment %}
+	{% if false %}
+		{% if show_stock_indicator_bar and inventory_quantity > 0 and inventory_status == 'low-stock' %}
+			<div class="mt-1">
+				<div class="product-info__stock-indicator-bar-wrapper w-full h-1 rounded-full">
+					<div class="product-info__stock-indicator-bar h-1 rounded-full" style="width: {{ percentage_stock_indicator_bar }}%"></div>
+				</div>
+			</div>
+		{% endif %}
+	{% endif %}
+</div>

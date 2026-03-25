@@ -1,0 +1,12 @@
+node_modules/
+.shopify/
+.idea/
+.vscode/
+dist/
+build/
+coverage/
+*.log
+.env
+.env.*
+Thumbs.db
+.DS_Store

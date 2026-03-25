@@ -1,0 +1,35 @@
+{
+    "sections": {
+        "main": {
+            "type": "main-search",
+            "settings": {
+                "products_per_page": 10,
+                "enable_filtering": true,
+                "sticky_filtering": false,
+                "filter_type": "drawer",
+                "default_hide_filtering": false,
+                "expand_filter": false,
+                "enable_result_count": true,
+                "enable_sorting": true,
+                "pagination": "pagination",
+                "columns_desktop_grid": 4,
+                "columns_mobile_grid": "2",
+                "show_vendor": true,
+                "show_rating": true,
+                "show_quickview": true,
+                "image_ratio": "100",
+                "show_date": true,
+                "show_author": true,
+                "spacing_desktop": 16,
+                "spacing_mobile": 16,
+                "section_width": "page-width",
+                "padding_top": 64,
+                "padding_bottom": 64,
+                "show_section_divider": false
+            }
+        }
+    },
+    "order": [
+        "main"
+    ]
+}

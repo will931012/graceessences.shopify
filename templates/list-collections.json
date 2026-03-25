@@ -1,0 +1,1583 @@
+{
+  "sections": {
+    "main-collection-list-banner": {
+      "type": "main-collection-list-banner",
+      "settings": {
+        "heading": "",
+        "title_position": "text-left",
+        "heading_size": "medium",
+        "heading_tag": "h2",
+        "image_overlay_opacity": 20,
+        "show_breadcrumbs": true,
+        "desktop_height": "450px",
+        "mobile_height": "300px",
+        "section_width": "full-width",
+        "padding_top": 0,
+        "padding_bottom": 16,
+        "color_scheme_light": "",
+        "color_scheme_dark": ""
+      }
+    },
+    "promotion_grid_QeYtiR": {
+      "type": "promotion-grid",
+      "blocks": {
+        "promotion_MLLPBP": {
+          "type": "promotion",
+          "settings": {
+            "image_link": "",
+            "open_new_window": false,
+            "show_sound_control": false,
+            "video_url": "",
+            "enable_video_autoplay": false,
+            "video_alt_text": "",
+            "enable_content_overlay": true,
+            "content_position": "center",
+            "overlay_opacity": 10,
+            "number_of_columns": 2,
+            "number_of_row": 1,
+            "icon": "none",
+            "another_icon": "",
+            "icon_size": 45,
+            "sub_title": "",
+            "title": "Sale 45% Off",
+            "title_size": "medium",
+            "text": "<p>Hurry up! Get the best deal at best price.</p>",
+            "text_size": "medium",
+            "highlight_effect": "marker",
+            "text_transform": "none",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary",
+            "text_align": "center",
+            "media_position": "top",
+            "line_1": "",
+            "line_1_size": "medium",
+            "line_2": "",
+            "line_2_size": "medium",
+            "line_3": "",
+            "line_3_size": "medium",
+            "sale_label_position": "top-left",
+            "sale_label_style": "circle",
+            "color_scheme_light": "",
+            "color_scheme_dark": "",
+            "sale_label_background_color": "#ce021e",
+            "sale_label_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "promotion_MLLPBP"
+      ],
+      "disabled": true,
+      "name": "Promotion grid",
+      "settings": {
+        "heading": "",
+        "heading_size": "medium",
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "highlight_effect": "underline",
+        "text_transform": "none",
+        "max_columns": 2,
+        "spacing": 12,
+        "height_desktop": 200,
+        "swipe_on_mobile": false,
+        "min_columns_mobile": "2",
+        "spacing_mobile": 8,
+        "height_mobile": 200,
+        "section_width": "full-width",
+        "padding_top": 0,
+        "padding_bottom": 16,
+        "show_section_divider": false,
+        "color_scheme_light": "",
+        "color_scheme_dark": ""
+      }
+    },
+    "promotion_grid_6WAWKF": {
+      "type": "promotion-grid",
+      "blocks": {
+        "promotion_JrRYaC": {
+          "type": "promotion",
+          "settings": {
+            "image_link": "",
+            "open_new_window": false,
+            "show_sound_control": false,
+            "video_url": "",
+            "enable_video_autoplay": false,
+            "video_alt_text": "",
+            "enable_content_overlay": true,
+            "content_position": "center",
+            "overlay_opacity": 0,
+            "number_of_columns": 1,
+            "number_of_row": 1,
+            "icon": "none",
+            "another_icon": "",
+            "icon_size": 45,
+            "sub_title": "",
+            "title": "",
+            "title_size": "medium",
+            "text": "",
+            "text_size": "medium",
+            "highlight_effect": "marker",
+            "text_transform": "none",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary",
+            "text_align": "right",
+            "media_position": "top",
+            "line_1": "",
+            "line_1_size": "medium",
+            "line_2": "",
+            "line_2_size": "medium",
+            "line_3": "",
+            "line_3_size": "medium",
+            "sale_label_position": "top-left",
+            "sale_label_style": "circle",
+            "color_scheme_light": "scheme-1",
+            "color_scheme_dark": "scheme-1",
+            "sale_label_background_color": "#ce021e",
+            "sale_label_color": "#ffffff"
+          }
+        },
+        "promotion_qDQR4M": {
+          "type": "promotion",
+          "settings": {
+            "image_link": "",
+            "open_new_window": false,
+            "show_sound_control": false,
+            "video_url": "",
+            "enable_video_autoplay": false,
+            "video_alt_text": "",
+            "enable_content_overlay": true,
+            "content_position": "center",
+            "overlay_opacity": 0,
+            "number_of_columns": 1,
+            "number_of_row": 1,
+            "icon": "none",
+            "another_icon": "",
+            "icon_size": 45,
+            "sub_title": "",
+            "title": "",
+            "title_size": "medium",
+            "text": "",
+            "text_size": "medium",
+            "highlight_effect": "marker",
+            "text_transform": "none",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary",
+            "text_align": "left",
+            "media_position": "top",
+            "line_1": "",
+            "line_1_size": "medium",
+            "line_2": "",
+            "line_2_size": "medium",
+            "line_3": "",
+            "line_3_size": "medium",
+            "sale_label_position": "top-left",
+            "sale_label_style": "circle",
+            "color_scheme_light": "scheme-1",
+            "color_scheme_dark": "scheme-1",
+            "sale_label_background_color": "#ce021e",
+            "sale_label_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "promotion_JrRYaC",
+        "promotion_qDQR4M"
+      ],
+      "name": "Promotion grid",
+      "settings": {
+        "heading": "",
+        "heading_size": "medium",
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "highlight_effect": "underline",
+        "text_transform": "none",
+        "max_columns": 2,
+        "spacing": 12,
+        "height_desktop": 220,
+        "swipe_on_mobile": true,
+        "min_columns_mobile": "1",
+        "spacing_mobile": 8,
+        "height_mobile": 200,
+        "section_width": "full-width",
+        "padding_top": 0,
+        "padding_bottom": 48,
+        "show_section_divider": false,
+        "color_scheme_light": "",
+        "color_scheme_dark": ""
+      }
+    },
+    "main": {
+      "type": "main-list-collections",
+      "blocks": {
+        "collection_DcHRTn": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "number_of_columns": 1,
+            "number_of_row": 1
+          }
+        },
+        "collection_PiAtw6": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "number_of_columns": 1,
+            "number_of_row": 1
+          }
+        }
+      },
+      "block_order": [
+        "collection_DcHRTn",
+        "collection_PiAtw6"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Collections",
+        "show_collection": "selected",
+        "sort": "date_reversed",
+        "image_ratio": "square",
+        "desktop_title_size": "medium",
+        "mobile_title_size": "small",
+        "show_text_overlay": false,
+        "content_alignment": "center",
+        "content_position": "bottom",
+        "image_overlay_opacity": 5,
+        "enabled_background": false,
+        "collection_card_color_scheme_light": "",
+        "collection_card_color_scheme_dark": "",
+        "show_item_count": true,
+        "columns_desktop": 5,
+        "spacing": 32,
+        "columns_mobile": "2",
+        "spacing_mobile": 20,
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "color_scheme_light": "",
+        "color_scheme_dark": ""
+      }
+    },
+    "collection_list_7t7Bp4": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_9LnXjk": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_RPhwdr": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_mnK4BT": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_QVGnmR": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_iDVKdB": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_KJJRVH": {
+          "type": "featured_collection",
+          "disabled": true,
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_6kx3eQ": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_cwaQ8M": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_4t8e7W": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_B7CieB": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_htab9M": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_9LnXjk",
+        "featured_collection_RPhwdr",
+        "featured_collection_mnK4BT",
+        "featured_collection_QVGnmR",
+        "featured_collection_iDVKdB",
+        "featured_collection_KJJRVH",
+        "featured_collection_6kx3eQ",
+        "featured_collection_cwaQ8M",
+        "featured_collection_4t8e7W",
+        "featured_collection_B7CieB",
+        "featured_collection_htab9M"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "heading": " Smartphones & Accessories",
+        "heading_size": "medium",
+        "heading_tag": "h2",
+        "heading_alignment": "left",
+        "highlight_effect": "underline",
+        "text_transform": "none",
+        "show_view_all_button": "View Collections",
+        "button_link": "",
+        "open_new_window": false,
+        "show_all_collections": true,
+        "collection_metafield": "",
+        "image_ratio": "square",
+        "desktop_title_size": "small",
+        "mobile_title_size": "small",
+        "content_alignment": "center",
+        "show_text_overlay": false,
+        "content_position": "bottom",
+        "image_overlay_opacity": 5,
+        "enabled_background": false,
+        "collection_card_color_scheme_light": "",
+        "collection_card_color_scheme_dark": "",
+        "show_item_count": true,
+        "enable_desktop_slider": true,
+        "swiper_on_mobile": true,
+        "columns_desktop": 10,
+        "spacing": 32,
+        "columns_mobile": 3,
+        "spacing_mobile": 16,
+        "section_width": "full-width-padded",
+        "padding_top": 32,
+        "padding_bottom": 16,
+        "show_section_divider": false,
+        "color_scheme_light": "",
+        "color_scheme_dark": ""
+      }
+    },
+    "promotion_grid_amNrUC": {
+      "type": "promotion-grid",
+      "blocks": {
+        "promotion_Cf8N4t": {
+          "type": "promotion",
+          "settings": {
+            "image_link": "",
+            "open_new_window": false,
+            "show_sound_control": false,
+            "video_url": "",
+            "enable_video_autoplay": false,
+            "video_alt_text": "",
+            "enable_content_overlay": true,
+            "content_position": "center",
+            "overlay_opacity": 0,
+            "number_of_columns": 1,
+            "number_of_row": 1,
+            "icon": "none",
+            "another_icon": "",
+            "icon_size": 45,
+            "sub_title": "[BLACK FRIDAY]",
+            "title": "Innovation in Detail.",
+            "title_size": "small",
+            "text": "",
+            "text_size": "medium",
+            "highlight_effect": "marker",
+            "text_transform": "none",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "text-link",
+            "text_align": "right",
+            "media_position": "top",
+            "line_1": "",
+            "line_1_size": "medium",
+            "line_2": "",
+            "line_2_size": "medium",
+            "line_3": "",
+            "line_3_size": "medium",
+            "sale_label_position": "top-left",
+            "sale_label_style": "circle",
+            "color_scheme_light": "scheme-1",
+            "color_scheme_dark": "scheme-1",
+            "sale_label_background_color": "#ce021e",
+            "sale_label_color": "#ffffff"
+          }
+        },
+        "promotion_bAbxJJ": {
+          "type": "promotion",
+          "settings": {
+            "image_link": "",
+            "open_new_window": false,
+            "show_sound_control": false,
+            "video_url": "",
+            "enable_video_autoplay": false,
+            "video_alt_text": "",
+            "enable_content_overlay": true,
+            "content_position": "center",
+            "overlay_opacity": 0,
+            "number_of_columns": 1,
+            "number_of_row": 1,
+            "icon": "none",
+            "another_icon": "",
+            "icon_size": 45,
+            "sub_title": "[UP TO 40% OFF]",
+            "title": "The Perfect Companions.",
+            "title_size": "small",
+            "text": "",
+            "text_size": "medium",
+            "highlight_effect": "marker",
+            "text_transform": "none",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary",
+            "text_align": "left",
+            "media_position": "top",
+            "line_1": "",
+            "line_1_size": "medium",
+            "line_2": "",
+            "line_2_size": "medium",
+            "line_3": "",
+            "line_3_size": "medium",
+            "sale_label_position": "top-left",
+            "sale_label_style": "circle",
+            "color_scheme_light": "scheme-1",
+            "color_scheme_dark": "scheme-1",
+            "sale_label_background_color": "#ce021e",
+            "sale_label_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "promotion_Cf8N4t",
+        "promotion_bAbxJJ"
+      ],
+      "name": "Promotion grid",
+      "settings": {
+        "heading": "",
+        "heading_size": "medium",
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "highlight_effect": "underline",
+        "text_transform": "none",
+        "max_columns": 2,
+        "spacing": 12,
+        "height_desktop": 250,
+        "swipe_on_mobile": false,
+        "min_columns_mobile": "1",
+        "spacing_mobile": 6,
+        "height_mobile": 200,
+        "section_width": "full-width",
+        "padding_top": 0,
+        "padding_bottom": 56,
+        "show_section_divider": false,
+        "color_scheme_light": "",
+        "color_scheme_dark": ""
+      }
+    },
+    "collection_list_4HQNWY": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_Um4Hfq": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_7NYXyz": {
+          "type": "featured_collection",
+          "disabled": true,
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_rDPpEb": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_QkC4Rz": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_fkpHTR": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_jVfgxK": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_tPmTdK": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_fCnFBA": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_CjT7Lh": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_VrQdY6": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_fDxrJe": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_b49fkH": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_Um4Hfq",
+        "featured_collection_7NYXyz",
+        "featured_collection_rDPpEb",
+        "featured_collection_QkC4Rz",
+        "featured_collection_fkpHTR",
+        "featured_collection_jVfgxK",
+        "featured_collection_tPmTdK",
+        "featured_collection_fCnFBA",
+        "featured_collection_CjT7Lh",
+        "featured_collection_VrQdY6",
+        "featured_collection_fDxrJe",
+        "featured_collection_b49fkH"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "heading": "Laptops & Tablets",
+        "heading_size": "medium",
+        "heading_tag": "h2",
+        "heading_alignment": "left",
+        "highlight_effect": "underline",
+        "text_transform": "none",
+        "show_view_all_button": "View Collections",
+        "button_link": "",
+        "open_new_window": false,
+        "show_all_collections": true,
+        "collection_metafield": "",
+        "image_ratio": "square",
+        "desktop_title_size": "small",
+        "mobile_title_size": "small",
+        "content_alignment": "center",
+        "show_text_overlay": false,
+        "content_position": "bottom",
+        "image_overlay_opacity": 5,
+        "enabled_background": false,
+        "collection_card_color_scheme_light": "",
+        "collection_card_color_scheme_dark": "",
+        "show_item_count": true,
+        "enable_desktop_slider": true,
+        "swiper_on_mobile": true,
+        "columns_desktop": 10,
+        "spacing": 32,
+        "columns_mobile": 3,
+        "spacing_mobile": 16,
+        "section_width": "full-width-padded",
+        "padding_top": 32,
+        "padding_bottom": 16,
+        "show_section_divider": false,
+        "color_scheme_light": "",
+        "color_scheme_dark": ""
+      }
+    },
+    "promotion_grid_M9tD8y": {
+      "type": "promotion-grid",
+      "blocks": {
+        "promotion_crKJXw": {
+          "type": "promotion",
+          "settings": {
+            "image_link": "",
+            "open_new_window": false,
+            "show_sound_control": false,
+            "video_url": "",
+            "enable_video_autoplay": false,
+            "video_alt_text": "",
+            "enable_content_overlay": true,
+            "content_position": "center",
+            "overlay_opacity": 0,
+            "number_of_columns": 1,
+            "number_of_row": 1,
+            "icon": "none",
+            "another_icon": "",
+            "icon_size": 45,
+            "sub_title": "[BLACK FRIDAY]",
+            "title": "Performance Refined.",
+            "title_size": "small",
+            "text": "",
+            "text_size": "medium",
+            "highlight_effect": "marker",
+            "text_transform": "none",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "text-link",
+            "text_align": "right",
+            "media_position": "top",
+            "line_1": "",
+            "line_1_size": "medium",
+            "line_2": "",
+            "line_2_size": "medium",
+            "line_3": "",
+            "line_3_size": "medium",
+            "sale_label_position": "top-left",
+            "sale_label_style": "circle",
+            "color_scheme_light": "scheme-1",
+            "color_scheme_dark": "scheme-1",
+            "sale_label_background_color": "#ce021e",
+            "sale_label_color": "#ffffff"
+          }
+        },
+        "promotion_GYJ8NT": {
+          "type": "promotion",
+          "settings": {
+            "image_link": "",
+            "open_new_window": false,
+            "show_sound_control": false,
+            "video_url": "",
+            "enable_video_autoplay": false,
+            "video_alt_text": "",
+            "enable_content_overlay": true,
+            "content_position": "center",
+            "overlay_opacity": 0,
+            "number_of_columns": 1,
+            "number_of_row": 1,
+            "icon": "none",
+            "another_icon": "",
+            "icon_size": 45,
+            "sub_title": "[UP TO 40% OFF]",
+            "title": "Designed to Inspire.",
+            "title_size": "small",
+            "text": "",
+            "text_size": "medium",
+            "highlight_effect": "marker",
+            "text_transform": "none",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary",
+            "text_align": "left",
+            "media_position": "top",
+            "line_1": "",
+            "line_1_size": "medium",
+            "line_2": "",
+            "line_2_size": "medium",
+            "line_3": "",
+            "line_3_size": "medium",
+            "sale_label_position": "top-left",
+            "sale_label_style": "circle",
+            "color_scheme_light": "scheme-1",
+            "color_scheme_dark": "scheme-1",
+            "sale_label_background_color": "#ce021e",
+            "sale_label_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "promotion_crKJXw",
+        "promotion_GYJ8NT"
+      ],
+      "name": "Promotion grid",
+      "settings": {
+        "heading": "",
+        "heading_size": "medium",
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "highlight_effect": "underline",
+        "text_transform": "none",
+        "max_columns": 2,
+        "spacing": 12,
+        "height_desktop": 250,
+        "swipe_on_mobile": false,
+        "min_columns_mobile": "1",
+        "spacing_mobile": 6,
+        "height_mobile": 200,
+        "section_width": "full-width",
+        "padding_top": 0,
+        "padding_bottom": 56,
+        "show_section_divider": false,
+        "color_scheme_light": "",
+        "color_scheme_dark": ""
+      }
+    },
+    "collection_list_6G6Hb9": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_3P8QmN": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_z8gef9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_XyBy4h": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_xb4HrJ": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_ByihTR": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_J6qajV": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_JtPziQ": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_3P8QmN",
+        "featured_collection_z8gef9",
+        "featured_collection_XyBy4h",
+        "featured_collection_xb4HrJ",
+        "featured_collection_ByihTR",
+        "featured_collection_J6qajV",
+        "featured_collection_JtPziQ"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "heading": " Audio & Entertainment",
+        "heading_size": "medium",
+        "heading_tag": "h2",
+        "heading_alignment": "left",
+        "highlight_effect": "underline",
+        "text_transform": "none",
+        "show_view_all_button": "View Collections",
+        "button_link": "",
+        "open_new_window": false,
+        "show_all_collections": true,
+        "collection_metafield": "",
+        "image_ratio": "square",
+        "desktop_title_size": "small",
+        "mobile_title_size": "small",
+        "content_alignment": "center",
+        "show_text_overlay": false,
+        "content_position": "bottom",
+        "image_overlay_opacity": 5,
+        "enabled_background": false,
+        "collection_card_color_scheme_light": "",
+        "collection_card_color_scheme_dark": "",
+        "show_item_count": true,
+        "enable_desktop_slider": true,
+        "swiper_on_mobile": true,
+        "columns_desktop": 10,
+        "spacing": 32,
+        "columns_mobile": 3,
+        "spacing_mobile": 16,
+        "section_width": "full-width-padded",
+        "padding_top": 32,
+        "padding_bottom": 16,
+        "show_section_divider": false,
+        "color_scheme_light": "",
+        "color_scheme_dark": ""
+      }
+    },
+    "promotion_grid_mHRTzf": {
+      "type": "promotion-grid",
+      "blocks": {
+        "promotion_iYdydW": {
+          "type": "promotion",
+          "settings": {
+            "image_link": "",
+            "open_new_window": false,
+            "show_sound_control": false,
+            "video_url": "",
+            "enable_video_autoplay": false,
+            "video_alt_text": "",
+            "enable_content_overlay": true,
+            "content_position": "bottom",
+            "overlay_opacity": 0,
+            "number_of_columns": 1,
+            "number_of_row": 1,
+            "icon": "none",
+            "another_icon": "",
+            "icon_size": 45,
+            "sub_title": "[HEADPHONES ]",
+            "title": "Pure Sound. Perfect Silence.",
+            "title_size": "small",
+            "text": "",
+            "text_size": "medium",
+            "highlight_effect": "marker",
+            "text_transform": "none",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary",
+            "text_align": "right",
+            "media_position": "top",
+            "line_1": "",
+            "line_1_size": "medium",
+            "line_2": "",
+            "line_2_size": "medium",
+            "line_3": "",
+            "line_3_size": "medium",
+            "sale_label_position": "top-left",
+            "sale_label_style": "circle",
+            "color_scheme_light": "scheme-1",
+            "color_scheme_dark": "scheme-1",
+            "sale_label_background_color": "#ce021e",
+            "sale_label_color": "#ffffff"
+          }
+        },
+        "promotion_BEfXjL": {
+          "type": "promotion",
+          "settings": {
+            "image_link": "",
+            "open_new_window": false,
+            "show_sound_control": false,
+            "video_url": "",
+            "enable_video_autoplay": false,
+            "video_alt_text": "",
+            "enable_content_overlay": true,
+            "content_position": "bottom",
+            "overlay_opacity": 0,
+            "number_of_columns": 1,
+            "number_of_row": 1,
+            "icon": "none",
+            "another_icon": "",
+            "icon_size": 45,
+            "sub_title": "[SPEAKERS]",
+            "title": "Sound That Speaks Luxury.",
+            "title_size": "small",
+            "text": "",
+            "text_size": "medium",
+            "highlight_effect": "marker",
+            "text_transform": "none",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary",
+            "text_align": "left",
+            "media_position": "top",
+            "line_1": "",
+            "line_1_size": "medium",
+            "line_2": "",
+            "line_2_size": "medium",
+            "line_3": "",
+            "line_3_size": "medium",
+            "sale_label_position": "top-left",
+            "sale_label_style": "circle",
+            "color_scheme_light": "scheme-1",
+            "color_scheme_dark": "scheme-1",
+            "sale_label_background_color": "#ce021e",
+            "sale_label_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "promotion_iYdydW",
+        "promotion_BEfXjL"
+      ],
+      "name": "Promotion grid",
+      "settings": {
+        "heading": "",
+        "heading_size": "medium",
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "highlight_effect": "underline",
+        "text_transform": "none",
+        "max_columns": 2,
+        "spacing": 12,
+        "height_desktop": 250,
+        "swipe_on_mobile": false,
+        "min_columns_mobile": "1",
+        "spacing_mobile": 6,
+        "height_mobile": 200,
+        "section_width": "full-width",
+        "padding_top": 0,
+        "padding_bottom": 56,
+        "show_section_divider": false,
+        "color_scheme_light": "",
+        "color_scheme_dark": ""
+      }
+    },
+    "collection_list_gATwkc": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_hNjQjf": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_naradh": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_qFaGdA": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_T3mfqU": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_k3MPVi": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_GgdxwH": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_FrtqKk": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_iLhWRU": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_kYUaRy": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_hNjQjf",
+        "featured_collection_naradh",
+        "featured_collection_qFaGdA",
+        "featured_collection_T3mfqU",
+        "featured_collection_k3MPVi",
+        "featured_collection_GgdxwH",
+        "featured_collection_FrtqKk",
+        "featured_collection_iLhWRU",
+        "featured_collection_kYUaRy"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "heading": "Wearables & Smart Devices",
+        "heading_size": "medium",
+        "heading_tag": "h2",
+        "heading_alignment": "left",
+        "highlight_effect": "underline",
+        "text_transform": "none",
+        "show_view_all_button": "View Collections",
+        "button_link": "",
+        "open_new_window": false,
+        "show_all_collections": true,
+        "collection_metafield": "",
+        "image_ratio": "square",
+        "desktop_title_size": "small",
+        "mobile_title_size": "small",
+        "content_alignment": "center",
+        "show_text_overlay": false,
+        "content_position": "bottom",
+        "image_overlay_opacity": 5,
+        "enabled_background": false,
+        "collection_card_color_scheme_light": "",
+        "collection_card_color_scheme_dark": "",
+        "show_item_count": true,
+        "enable_desktop_slider": true,
+        "swiper_on_mobile": true,
+        "columns_desktop": 10,
+        "spacing": 32,
+        "columns_mobile": 3,
+        "spacing_mobile": 16,
+        "section_width": "full-width-padded",
+        "padding_top": 32,
+        "padding_bottom": 16,
+        "show_section_divider": false,
+        "color_scheme_light": "",
+        "color_scheme_dark": ""
+      }
+    },
+    "promotion_grid_LzQ9y6": {
+      "type": "promotion-grid",
+      "blocks": {
+        "promotion_hw9z7g": {
+          "type": "promotion",
+          "settings": {
+            "image_link": "",
+            "open_new_window": false,
+            "show_sound_control": false,
+            "video_url": "",
+            "enable_video_autoplay": false,
+            "video_alt_text": "",
+            "enable_content_overlay": true,
+            "content_position": "bottom",
+            "overlay_opacity": 0,
+            "number_of_columns": 1,
+            "number_of_row": 1,
+            "icon": "none",
+            "another_icon": "",
+            "icon_size": 45,
+            "sub_title": "[SMART SCALES]",
+            "title": "Precision Meets Wellness.",
+            "title_size": "small",
+            "text": "",
+            "text_size": "medium",
+            "highlight_effect": "marker",
+            "text_transform": "none",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary",
+            "text_align": "right",
+            "media_position": "top",
+            "line_1": "",
+            "line_1_size": "medium",
+            "line_2": "",
+            "line_2_size": "medium",
+            "line_3": "",
+            "line_3_size": "medium",
+            "sale_label_position": "top-left",
+            "sale_label_style": "circle",
+            "color_scheme_light": "scheme-1",
+            "color_scheme_dark": "scheme-1",
+            "sale_label_background_color": "#ce021e",
+            "sale_label_color": "#ffffff"
+          }
+        },
+        "promotion_bHNaLd": {
+          "type": "promotion",
+          "settings": {
+            "image_link": "",
+            "open_new_window": false,
+            "show_sound_control": false,
+            "video_url": "",
+            "enable_video_autoplay": false,
+            "video_alt_text": "",
+            "enable_content_overlay": true,
+            "content_position": "bottom",
+            "overlay_opacity": 0,
+            "number_of_columns": 1,
+            "number_of_row": 1,
+            "icon": "none",
+            "another_icon": "",
+            "icon_size": 45,
+            "sub_title": "[HOME THERMOSTAT]",
+            "title": "Comfort, Perfectly Controlled.",
+            "title_size": "small",
+            "text": "",
+            "text_size": "medium",
+            "highlight_effect": "marker",
+            "text_transform": "none",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary",
+            "text_align": "left",
+            "media_position": "top",
+            "line_1": "",
+            "line_1_size": "medium",
+            "line_2": "",
+            "line_2_size": "medium",
+            "line_3": "",
+            "line_3_size": "medium",
+            "sale_label_position": "top-left",
+            "sale_label_style": "circle",
+            "color_scheme_light": "scheme-1",
+            "color_scheme_dark": "scheme-1",
+            "sale_label_background_color": "#ce021e",
+            "sale_label_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "promotion_hw9z7g",
+        "promotion_bHNaLd"
+      ],
+      "name": "Promotion grid",
+      "settings": {
+        "heading": "",
+        "heading_size": "medium",
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "highlight_effect": "underline",
+        "text_transform": "none",
+        "max_columns": 2,
+        "spacing": 12,
+        "height_desktop": 250,
+        "swipe_on_mobile": false,
+        "min_columns_mobile": "1",
+        "spacing_mobile": 6,
+        "height_mobile": 200,
+        "section_width": "full-width",
+        "padding_top": 0,
+        "padding_bottom": 56,
+        "show_section_divider": false,
+        "color_scheme_light": "",
+        "color_scheme_dark": ""
+      }
+    },
+    "collection_list_zez4Et": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_6f8jE9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_8k6KTV": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_U8cHPM": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_mhGHiP": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_jM9b3k": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_LyiziJ": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_C4QVFR": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_zqAiA4": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_3YQAxA": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_Etn8XX": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_ihCP8K": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_kPej4w": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_bL3rCh": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_fxKNUe": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_3ca8ee": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_tjrXRF": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_6f8jE9",
+        "featured_collection_8k6KTV",
+        "featured_collection_U8cHPM",
+        "featured_collection_mhGHiP",
+        "featured_collection_jM9b3k",
+        "featured_collection_LyiziJ",
+        "featured_collection_C4QVFR",
+        "featured_collection_zqAiA4",
+        "featured_collection_3YQAxA",
+        "featured_collection_Etn8XX",
+        "featured_collection_ihCP8K",
+        "featured_collection_kPej4w",
+        "featured_collection_bL3rCh",
+        "featured_collection_fxKNUe",
+        "featured_collection_3ca8ee",
+        "featured_collection_tjrXRF"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "heading": "Home Appliances",
+        "heading_size": "medium",
+        "heading_tag": "h2",
+        "heading_alignment": "left",
+        "highlight_effect": "underline",
+        "text_transform": "none",
+        "show_view_all_button": "View Collections",
+        "button_link": "",
+        "open_new_window": false,
+        "show_all_collections": true,
+        "collection_metafield": "",
+        "image_ratio": "square",
+        "desktop_title_size": "small",
+        "mobile_title_size": "small",
+        "content_alignment": "center",
+        "show_text_overlay": false,
+        "content_position": "bottom",
+        "image_overlay_opacity": 5,
+        "enabled_background": false,
+        "collection_card_color_scheme_light": "",
+        "collection_card_color_scheme_dark": "",
+        "show_item_count": true,
+        "enable_desktop_slider": true,
+        "swiper_on_mobile": true,
+        "columns_desktop": 10,
+        "spacing": 32,
+        "columns_mobile": 3,
+        "spacing_mobile": 16,
+        "section_width": "full-width-padded",
+        "padding_top": 32,
+        "padding_bottom": 16,
+        "show_section_divider": false,
+        "color_scheme_light": "",
+        "color_scheme_dark": ""
+      }
+    },
+    "promotion_grid_jQNfEy": {
+      "type": "promotion-grid",
+      "blocks": {
+        "promotion_FdfUyg": {
+          "type": "promotion",
+          "settings": {
+            "image_link": "",
+            "open_new_window": false,
+            "show_sound_control": false,
+            "video_url": "",
+            "enable_video_autoplay": false,
+            "video_alt_text": "",
+            "enable_content_overlay": true,
+            "content_position": "bottom",
+            "overlay_opacity": 0,
+            "number_of_columns": 1,
+            "number_of_row": 1,
+            "icon": "none",
+            "another_icon": "",
+            "icon_size": 45,
+            "sub_title": "[SMART TVs]",
+            "title": "Intelligence Meets Elegance.",
+            "title_size": "small",
+            "text": "",
+            "text_size": "medium",
+            "highlight_effect": "marker",
+            "text_transform": "none",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary",
+            "text_align": "right",
+            "media_position": "top",
+            "line_1": "",
+            "line_1_size": "medium",
+            "line_2": "",
+            "line_2_size": "medium",
+            "line_3": "",
+            "line_3_size": "medium",
+            "sale_label_position": "top-left",
+            "sale_label_style": "circle",
+            "color_scheme_light": "scheme-1",
+            "color_scheme_dark": "scheme-1",
+            "sale_label_background_color": "#ce021e",
+            "sale_label_color": "#ffffff"
+          }
+        },
+        "promotion_7x9hiJ": {
+          "type": "promotion",
+          "settings": {
+            "image_link": "",
+            "open_new_window": false,
+            "show_sound_control": false,
+            "video_url": "",
+            "enable_video_autoplay": false,
+            "video_alt_text": "",
+            "enable_content_overlay": true,
+            "content_position": "bottom",
+            "overlay_opacity": 0,
+            "number_of_columns": 1,
+            "number_of_row": 1,
+            "icon": "none",
+            "another_icon": "",
+            "icon_size": 45,
+            "sub_title": "[4K / 8K TVs]",
+            "title": "Every Pixel. Perfected.",
+            "title_size": "small",
+            "text": "",
+            "text_size": "medium",
+            "highlight_effect": "marker",
+            "text_transform": "none",
+            "button_label": "",
+            "button_link": "",
+            "open_new_window_button": false,
+            "show_button_style": "primary",
+            "text_align": "left",
+            "media_position": "top",
+            "line_1": "",
+            "line_1_size": "medium",
+            "line_2": "",
+            "line_2_size": "medium",
+            "line_3": "",
+            "line_3_size": "medium",
+            "sale_label_position": "top-left",
+            "sale_label_style": "circle",
+            "color_scheme_light": "scheme-1",
+            "color_scheme_dark": "scheme-1",
+            "sale_label_background_color": "#ce021e",
+            "sale_label_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "promotion_FdfUyg",
+        "promotion_7x9hiJ"
+      ],
+      "name": "Promotion grid",
+      "settings": {
+        "heading": "",
+        "heading_size": "medium",
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "highlight_effect": "underline",
+        "text_transform": "none",
+        "max_columns": 2,
+        "spacing": 12,
+        "height_desktop": 250,
+        "swipe_on_mobile": false,
+        "min_columns_mobile": "1",
+        "spacing_mobile": 6,
+        "height_mobile": 200,
+        "section_width": "full-width",
+        "padding_top": 0,
+        "padding_bottom": 64,
+        "show_section_divider": false,
+        "color_scheme_light": "",
+        "color_scheme_dark": ""
+      }
+    },
+    "text_columns_with_icons_x4ww7X": {
+      "type": "text-columns-with-icons",
+      "blocks": {
+        "column_jmftWC": {
+          "type": "column",
+          "settings": {
+            "icon": "quality",
+            "another_icon": "",
+            "title": "Quality and Saving",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": "small",
+            "text": "<p>Comprehensive quality control and affordable prices.</p>",
+            "highlight_effect": "underline",
+            "text_transform": "none"
+          }
+        },
+        "column_8TbHTQ": {
+          "type": "column",
+          "settings": {
+            "icon": "express-shipping",
+            "another_icon": "",
+            "title": "Fast Shipping",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": "small",
+            "text": "<p>Fast and convenient door to door delivery.</p>",
+            "highlight_effect": "underline",
+            "text_transform": "none"
+          }
+        },
+        "column_ydqyUr": {
+          "type": "column",
+          "settings": {
+            "icon": "money-back",
+            "another_icon": "",
+            "title": "Payment Security",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": "small",
+            "text": "<p>More than 10 different secure payment methods.</p>",
+            "highlight_effect": "underline",
+            "text_transform": "none"
+          }
+        },
+        "column_jxp9iU": {
+          "type": "column",
+          "settings": {
+            "icon": "sustainable",
+            "another_icon": "",
+            "title": "Have Questions?",
+            "title_link": "",
+            "open_new_window": false,
+            "heading_size": "small",
+            "text": "<p>24/7 Customer Service - We’re here and happy to help!</p>",
+            "highlight_effect": "underline",
+            "text_transform": "none"
+          }
+        }
+      },
+      "block_order": [
+        "column_jmftWC",
+        "column_8TbHTQ",
+        "column_ydqyUr",
+        "column_jxp9iU"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "medium",
+        "heading_tag": "h2",
+        "highlight_effect": "underline",
+        "text_transform": "none",
+        "border_column": "line_vertical",
+        "column_content_alignment": "center",
+        "icon_position": "above",
+        "icon_size": 36,
+        "enable_desktop_slider": true,
+        "swipe_on_mobile": false,
+        "change_bar_every": 0,
+        "show_navigation_arrows": true,
+        "column_layout_desktop": 5,
+        "section_height_desktop": "md:py-7",
+        "spacing_desktop": 48,
+        "column_layout_mobile": "2",
+        "section_height_mobile": "py-0",
+        "spacing_mobile": 26,
+        "section_width": "page-width",
+        "padding_top": 0,
+        "padding_bottom": 64,
+        "show_section_divider": false,
+        "color_scheme_light": "",
+        "background_color_light": "rgba(0,0,0,0)",
+        "color_icon_light": "rgba(0,0,0,0)",
+        "color_scheme_dark": "",
+        "background_color_dark": "rgba(0,0,0,0)",
+        "color_icon_dark": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main-collection-list-banner",
+    "promotion_grid_QeYtiR",
+    "promotion_grid_6WAWKF",
+    "main",
+    "collection_list_7t7Bp4",
+    "promotion_grid_amNrUC",
+    "collection_list_4HQNWY",
+    "promotion_grid_M9tD8y",
+    "collection_list_6G6Hb9",
+    "promotion_grid_mHRTzf",
+    "collection_list_gATwkc",
+    "promotion_grid_LzQ9y6",
+    "collection_list_zez4Et",
+    "promotion_grid_jQNfEy",
+    "text_columns_with_icons_x4ww7X"
+  ]
+}

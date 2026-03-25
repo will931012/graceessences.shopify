@@ -1,0 +1,139 @@
+<div 
+  x-data="xQuickHelpPopup"
+  class="quick-help-popup fixed z-50 bottom-4 md:bottom-8 right-4 md:right-8 pl-4 md:pl-8 pointer-events-auto text-left rtl:text-right"
+  x-cloak
+  x-show="showPopup"
+>
+  <div 
+    class="relative mb-2" 
+    x-show="showPopup"
+    x-cloak
+    x-transition:enter="transition-all ease-in-out duration-300"
+    x-transition:enter-start="opacity-0 transform md:translate-x-1/3 translate-y-1/3 md:translate-y-0"
+    x-transition:enter-end="opacity-100 transform md:translate-x-0 translate-y-0"
+    x-transition:leave="transition-all ease-in-out duration-300"
+    x-transition:leave-end="opacity-0 transform md:translate-x-1/3 translate-y-1/3 md:translate-y-0"
+    @keyup.escape="closePopup()"
+  >
+    <div 
+      class="quick-help-popup__container w-full p-2 md:p-3 ltr:pl-3 rtl:pr-3 md:ltr:pl-4 md:rtl:pr-4 !bg-gradient-no-alpha color-{{ settings.color_schemes_light }} dark-color-{{ settings.color_schemes_dark }} shadow-small rounded-corners overflow-hidden max-w-[480px]"
+    >
+      <div class="quick-help-popup__wrapper modal-title-wrapper gap-3">
+        <div class="quick-help-popup__content grow flex flex-col anm-fade-element rte" x-intersect.once="$el.classList.add('is-visible')">
+          <p>NEED HELP WITH MAXIMIZE?</p>
+          <p>📘 <a href="https://support.omnithemes.com/blogs/themes/maximize-theme?utm_source=popup&utm_medium=in-theme" target="_blank">User Guide</a> - Quick setup &amp; usage instructions.</p>
+          <p>💬 <a href="https://omnithemes.com/contact/?product=maximize&utm_source=popup&utm_medium=in-theme" target="_blank">Contact Support</a> - Get help from our support team.</p>
+          <p>✨ New Update: <a href="https://themes.shopify.com/themes/maximize/presets/maximize#ReleaseNotes" target="_blank">Version <span x-text="currentThemeVersion"></span></a> is live!</p>
+          <p>🆓 <a href="https://omnithemes.com/theme-setup-design-consulting/?utm_source=popup&utm_medium=in-theme&utm_campaign=maximize" target="_blank">Get free theme design & setup.</a></p>
+          <p>Note: this popup will not appear on your store.</p>
+          <p class="mt-2">Sign up to receive product updates and exclusive deals.</p>
+
+          <div class="quick-help-popup__email-form__wrapper">
+            <div class="quick-help-popup__email-form text-field__wrapper text-field__has-button items-center mt-2.5">
+              <div class="text-field__content">
+                <input
+                  type="email"
+                  name="contact[email]"
+                  class="quick-help-popup__email-form__input text-field__input"
+                  aria-required="true"
+                  autocorrect="off"
+                  autocapitalize="off"
+                  autocomplete="email" 
+                  placeholder="{{ 'newsletter.label' | t }}"
+                  x-model="email"
+                  @input.debounce.500ms="errorEmail = validateEmail(email); isSubscribed = false"
+                  required
+                >
+              </div>
+              <custom-button>
+                <button 
+                  type="button"
+                  class="quick-help-popup__email-form__button button button-secondary p-2 rounded-corners-md flex h-fit"
+                  :disabled="errorEmail.isError === true"
+                  @click.prevent="handleClickButtonSubscribe('{{ shop.url }}', '{{ shop.email }}', '{{ settings.selected_preset }}', '{{ shop.id }}')"
+                >
+                  <span
+                    class="quick-help-popup__email-form__icon-arrow w-3.5 h-3.5 block rtl:rotate-180"
+                    :class="loadingSubscribe ? 'opacity-0' : ''"
+                  >
+                    {% render 'icon-all', icon: 'icon-arrow' %}
+                  </span>
+                  <div
+                    class="quick-help-popup__email-form__icon-loading_wrapper absolute inset-0 flex items-center justify-center pointer-events-none"
+                    x-show="loadingSubscribe"
+                    x-cloak
+                  >
+                    <span class="quick-help-popup__email-form__icon-loading w-3.5 h-3.5 block animate-spin">
+                      {% render 'icon-all', icon: 'icon-loading' %}
+                    </span>
+                  </div>
+                </button>
+              </custom-button>
+            </div>
+
+            <div 
+              class="quick-help-popup__email-form__succes flash-message success-message mt-1 flex gap-x-2" 
+              x-show="isSubscribed"
+              x-cloak
+            >
+              <span class="inline-block w-4 h-4">
+                {%- render 'icon-all', icon: 'icon-tick' -%}
+              </span>
+              <p class="flex-1">{{ 'newsletter.success' | t }}</p>
+            </div>
+          </div>
+          
+        </div>
+        <button aria-label="{{ 'accessibility.close' | t }}"
+          class="quick-help-popup__button-close cursor-pointer flex h-fit"
+          @click.prevent.stop="closePopup()"
+          @keyup.enter.stop="closePopup()"
+          @keydown.enter.prevent
+        >
+          <span class="button__close icon-close-xsmall-desktop icon-close-xsmall-mobile">
+            {% render 'icon-all', icon: 'icon-close' %}
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  requestAnimationFrame(() => {
+    document.addEventListener('alpine:init', () => {
+      Alpine.data('xQuickHelpPopup', () => ({
+        showPopup: false,
+        TIMEOUT_SHOW_POPUP: 300,
+        currentThemeVersion: Shopify.theme.schema_version,
+        email: '',
+        loadingSubscribe: false,
+        errorEmail: validateEmail(''),
+        isSubscribed: false,
+        init() {
+          const popupClosedInVersion = localStorage.getItem(LOCAL_STORAGE.quick_help_popup_closed_in_version);
+
+          if (popupClosedInVersion) {
+            if (popupClosedInVersion == this.currentThemeVersion) return;
+
+            localStorage.removeItem(LOCAL_STORAGE.quick_help_popup_closed_in_version);
+          }
+          setTimeout(() => {
+            this.showPopup = true;
+          }, this.TIMEOUT_SHOW_POPUP)
+        },
+        closePopup() {
+          this.showPopup = false;
+          localStorage.setItem(`${LOCAL_STORAGE.quick_help_popup_closed_in_version}`, this.currentThemeVersion)
+        },
+        async handleClickButtonSubscribe(url, ct, preset, shopId) {
+          if (this.errorEmail.isError !== true && !this.loadingSubscribe) {
+            this.loadingSubscribe = true;
+            this.isSubscribed = await Alpine.store('xCc').subscribeEmail(url, ct, preset, shopId, this.email);
+            this.loadingSubscribe = false;
+          }
+        }
+      }));
+    });
+  })
+</script>

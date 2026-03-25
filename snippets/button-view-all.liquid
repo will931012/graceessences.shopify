@@ -1,0 +1,19 @@
+{%- if button_style == 'button' -%}
+  <div class="flex items-center gap-1">
+    {{- view_all_button_label -}}
+    <span class="w-2 h-2 inline-block rtl:rotate-180" role="img" aria-label="arrow">
+      {%- render 'icon-all', icon: 'icon-double-arrow' -%}
+    </span>
+  </div>
+{%- else -%}
+  <custom-button>
+    <div class="button empty:hidden
+        {%- if class != blank %} {{ class }}{% endif -%}
+        {%- if button_style == 'secondary' %} inline-block button-secondary 
+        {%- elsif button_style == 'text-link' %} button-link button-no-padding
+        {%- else %} inline-block button-primary {% endif -%}"
+    >
+      {% render 'button-label', button_label: view_all_button_label, show_button_style: button_style %}
+    </div>
+  </custom-button>
+{%- endif -%}

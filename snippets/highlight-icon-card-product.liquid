@@ -1,0 +1,24 @@
+<div class="relative flex highlight-icon">
+  {% if highlight_icon.type == 'file_reference' %}
+    <img
+      src="{{ highlight_icon | image_url: width: 100 }}"
+      alt="{{ highlight_icon.value.alt | default: highlight_icon.type | escape }}"
+      loading="lazy"
+      width="{{ highlight_icon.value.width }}"
+      height="{{ highlight_icon.value.height }}"
+      class="h-[30px]"
+      style="width: {{ highlight_icon.value.aspect_ratio | times: 30 }}px"
+    >
+  {% elsif highlight_icon.type == 'single_line_text_field' %}
+    <span class="inline-block relative w-[30px] h-[30px] empty:hidden">{%- render 'icon-another', icon: highlight_icon -%}</span>
+  {% endif %}
+  {% if label_icon != blank %}
+    <div
+      x-intersect.once="setPosition($el); addResizeHandler($el)"
+      class="absolute p-break-words left-[calc(50%+var(--left-tooltip))] p-break-words opacity-0 -z-10 highlight-icon-tooltip bottom-full pl-2 pr-2 pb-1 pt-1 w-max max-w-[var(--max-width-tooltip)]  -translate-x-1/2 before:w-2 before:h-2 before:rotate-45 before:absolute before:-bottom-1 before:left-[calc(50%-var(--left-tooltip))] before:-translate-x-1 color-bg-[rgba(var(--color-secondary-button))]{% if settings.edges_type == 'rounded_corners' %} rounded-md{% endif %}"
+      style="--left-tooltip: 0px; --max-width-tooltip: 200px"
+    >
+      {{ label_icon | escape }}
+    </div>
+  {% endif %}
+</div>

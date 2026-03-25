@@ -1,0 +1,273 @@
+<div>
+  {% liquid
+    assign current_variant = product.selected_or_first_available_variant
+    assign swatch_natural = false
+    if settings.swatch_style == 'natural'
+      assign swatch_natural = true
+    endif
+
+    assign swatch_color_show_by_default = settings.pc_swatch_color_show_by_default
+    assign swatch_text_show_by_default = settings.pc_swatch_text_show_by_default
+    assign text_option_name = settings.pc_swatch_text_option_name | split: ';'
+    assign swatch_option_name = settings.swatch_option_name | split: ';'
+    assign settings_show_swatch = false
+    if settings.pc_swatches_type == 'color' or settings.pc_swatches_type == 'both_text_and_color'
+      assign settings_show_swatch = true
+      assign list_swatch_option_values = settings.swatch_option_values | newline_to_br | strip_newlines | split: '<br />'
+    endif
+  %}
+  {% capture list_metafield_label %}
+    {% liquid
+      assign metafield_label_list = settings.label_and_badge_mtf | newline_to_br | strip_newlines | split: '<br />'
+      for metafield_key in metafield_label_list
+        assign list_key = metafield_key | split: "."
+        assign data_metafield = current_variant.metafields[list_key[0]][list_key[1]]
+        if data_metafield == blank or data_metafield.type != "single_line_text_field"
+          assign data_metafield = product.metafields[list_key[0]][list_key[1]]
+          if data_metafield.type != "single_line_text_field"
+            assign data_metafield = ""
+          endif 
+        endif 
+        if data_metafield
+          echo '{"' | append: metafield_key | append: '": ' | append: '"' | append: data_metafield | append: '"},'
+        endif
+      endfor
+    %}
+  {% endcapture %}
+  {% liquid
+    assign list_metafield_label = list_metafield_label | remove_last: ','
+    assign list_metafield_label = '[' | append: list_metafield_label | append: ']'
+  %}
+  {%- capture data_for_label -%}
+    {
+    {% if settings.label_and_badge_mtf != blank %}
+      "metafield_label": {{ list_metafield_label }}
+    {% endif %}
+    }
+  {%- endcapture %}
+
+  <div id="product-swatch" data-metafield-label="{{ data_for_label |  escape }}">
+    {% for product_option in product.options_with_values %}
+      {% liquid
+        assign show_color_swatch = false
+        if settings_show_swatch
+          if swatch_option_name contains product_option.name
+            assign show_color_swatch = "color-setting"
+          else
+            for option_value in product_option.values
+              if option_value.swatch
+                assign show_color_swatch = "category-mtf"
+                break
+              endif
+            endfor
+          endif
+        endif
+
+        if settings.pc_swatches_type == 'text' or settings.pc_swatches_type == 'both_text_and_color'
+          unless show_color_swatch == "color-setting"
+            if text_option_name contains product_option.name
+              assign show_color_swatch = false
+            endif
+          endunless
+        endif
+
+        assign product_option_position = product_option.position
+        assign product_option_index = product_option_position | minus: 1
+      %}
+      <div class="variant-picker__product-option">
+        {% for option_value in product_option.values %}
+          {% liquid
+            assign is_selected_option = false
+            if product_option.selected_value == option_value
+              assign is_selected_option = true
+            endif
+
+            assign option_id = section.id | append: '-' | append: option_value.id | append: choose_option_id
+            assign data_position = product_option.position | append: '-' | append: forloop.index0 | append: '-' | append: product.id
+          %}
+
+          {% liquid
+            if option_value.available
+              assign option_disabled = false
+            else
+              assign option_disabled = true
+            endif
+          %}
+
+          {% if show_color_swatch %}
+            {% liquid
+              assign swatch_value_option = null
+              assign multi_colors = null
+              assign image_url = false
+
+              if show_color_swatch == "color-setting"
+                for swatch_option in list_swatch_option_values
+                  assign swatch_item_key = swatch_option | split: ':' | first
+                  assign swatch_item_value = swatch_option | split: ':' | last | strip
+                  if swatch_item_key == option_value
+                    assign swatch_value_option = swatch_item_value
+                    break
+                  endif
+                endfor
+              endif
+
+              assign swatch_value = option_value.name | downcase
+              assign swatch_option_style = 'color'
+              if option_value.swatch.image != blank
+                assign swatch_option_style = 'image'
+                assign image_url = option_value.swatch.image | image_url: width: 40
+                assign swatch_value = 'url(' | append: image_url | append: ')'
+              elsif option_value.swatch.color
+                assign swatch_value = 'rgba(' | append: option_value.swatch.color.rgba | append: ')'
+              endif
+
+              if swatch_value_option
+                if swatch_value_option contains '.'
+                  assign swatch_option_style = 'image'
+                  assign image_url = swatch_value_option | file_img_url: '50x50'
+                  assign swatch_value = 'url(' | append: image_url | append: ')'
+                else
+                  assign multi_colors = swatch_value_option | remove_first: '#' | split: '#'
+                  assign swatch_value = swatch_value_option
+                  assign swatch_option_style = 'color'
+                endif
+              endif
+            %}
+            {% capture linear_background %}
+              {% if multi_colors.size == 3 %}
+                linear-gradient(45deg, {{ '#' | append: multi_colors[0] }}, {{ '#' | append: multi_colors[0] }} 33.3%, {{ '#' | append: multi_colors[1] }} 33.3%, {{ '#' | append: multi_colors[1] }} 66.6%, {{ '#' | append: multi_colors[2] }} 66.6%, {{ '#' | append: multi_colors[2] }});
+              {% elsif multi_colors.size == 2 %}
+                linear-gradient(45deg, {{ '#' | append: multi_colors[0] }}, {{ '#' | append: multi_colors[0] }} 50%, {{ '#' | append: multi_colors[1] }} 50%, {{ '#' | append: multi_colors[1] }});
+              {% endif %}
+            {% endcapture %}
+            {% liquid
+              if multi_colors.size > 1
+                assign swatch_value = linear_background
+                assign swatch_option_style = 'image'
+              endif
+              if settings.replace_color_with_variant_images
+                assign variant_of_option_value = option_value.variant
+                if variant_of_option_value.featured_media.preview_image != blank
+                  assign image_url = variant_of_option_value.featured_media.preview_image | image_url: width: 40
+                elsif product.featured_media.preview_image != blank
+                  assign image_url = product.featured_media.preview_image | image_url: width: 40
+                endif
+                if image_url != blank
+                  assign swatch_option_style = 'image'
+                  assign swatch_value = 'url(' | append: image_url | append: ')'
+                endif
+              endif
+
+              if forloop.first
+                assign ratio_image = 1
+                if swatch_option_style == 'image'
+                  assign ratio_image = 1 | divided_by: image_url.aspect_ratio
+                endif
+              endif
+            %}
+            {%- capture inline_style -%}
+                {% if swatch_value %}
+                  {% if swatch_option_style == 'color' %}
+                    --swatch-color-value: {{ swatch_value }};
+                  {% elsif swatch_option_style == 'image' %}
+                    --swatch-image-value: {{ swatch_value }}; --swatch-color-value: {{ option_value.name | downcase }}
+                  {% endif %}
+                {% endif %}
+              {%- endcapture -%}
+            <input
+              class="swatch-option__value variant-option {% if option_disabled %} disabled{% endif %} {% if option_value.selected %} selected{% endif %}"
+              type="radio"
+              id="{{ option_id }}"
+              name="VariantSelect-{{ product_option.name }}"
+              data-option-value-id="{{ option_value.id }}"
+            >
+            <label
+              class="swatch-option__label variant-option__label {% if swatch_natural %} swatch-option__natural{% endif %}"
+              style="{% if swatch_natural %}--swatch-option-ratio: {{ ratio_image }};{% endif %} {{ inline_style }}"
+              data-position="{{ data_position }}"
+            >
+            </label>
+          {% else %}
+            <input
+              class="swatch-option__value variant-option {% if option_disabled %} disabled{% endif %} {% if option_value.selected %} selected{% endif %}"
+              type="radio"
+              data-option-value-id="{{ option_value.id }}"
+            >
+            <label
+              class="swatch-option__label"
+              data-swatch-type="text"
+              data-position="{{ data_position }}"
+            >
+              {{ option_value | escape }}
+            </label>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+  <div class="estimate-delivery-card-msg">
+    {% liquid
+      assign is_show_preorder = false
+      assign is_apply_preorder = false
+      if settings.applied_products_preorder == blank and settings.applied_collections_preorder == blank
+        assign is_apply_preorder = true
+      else
+        assign list_product = ''
+        for prod in settings.applied_products_preorder
+          assign list_product = list_product | append: ';' | append: prod.id
+        endfor
+        for collec in settings.applied_collections_preorder
+          for prod in collec.products
+            assign list_product = list_product | append: ';' | append: prod.id
+          endfor
+        endfor
+        if list_product contains product.id
+          assign is_apply_preorder = true
+        endif
+      endif
+      if is_apply_preorder
+        if settings.preorder_show == 'yes'
+          if current_variant.inventory_management == null
+            assign is_show_preorder = true
+          else
+            if current_variant.inventory_quantity > 0
+              assign is_show_preorder = true
+            elsif current_variant.inventory_policy == 'continue' and current_variant.inventory_management != null
+              assign is_show_preorder = true
+            endif
+          endif
+        elsif settings.preorder_show == 'on_back_ordered'
+          if current_variant.inventory_policy == 'continue' and current_variant.inventory_quantity < 1 and current_variant.inventory_management != null
+            assign is_show_preorder = true
+          endif
+        endif
+      endif
+      assign content_alignment = settings.pc_content_alignment
+    %}
+    {% liquid
+      assign enable_cart_edt = true
+      if is_show_preorder and settings.pc_hide_when_pre_order
+        assign enable_cart_edt = false
+      endif
+    %}
+    {%- if enable_cart_edt -%}
+      {%- render 'estimate-delivery-product-card', product: product, variant: current_variant -%}
+    {%- endif -%}
+  </div>
+  {% liquid
+    assign img = current_variant.featured_media
+    if current_variant.featured_media == blank
+      assign img = product.featured_media
+    endif
+    assign card_preview_image = img.preview_image
+  %}
+  {% liquid
+    assign attributes_first_image = 'data-media-id="' | append: img.id | append: '"'
+  %}
+  {% render 'image', img_class: 'product-card__image', img: card_preview_image, alt: product.featured_media.alt, img_width: 500, attributes: attributes_first_image, sizes: sizes, eager_loading: eager_loading %}
+  <div
+    class="current-variant hidden"
+  >
+    {{ product.selected_or_first_available_variant.id }}
+  </div>
+</div>

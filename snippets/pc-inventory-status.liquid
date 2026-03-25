@@ -1,0 +1,70 @@
+{% comment %}
+  Accepts:
+     - product: {Object} Product Object
+     - variant: {Object} Variant Object
+
+   Usage:
+  {% render 'pc-inventory-status',
+  	product: product
+  %}
+{% endcomment %}
+{% liquid
+  assign low_stock_threshold = settings.low_stock_threshold | plus: 0
+%}
+
+{% liquid
+  assign inventory_status = 'in-stock'
+  assign track_inventory_status = true
+  assign inventory_quantity = 0
+  for variant in product.variants
+    if variant.inventory_management == 'shopify'
+      assign inventory_quantity = inventory_quantity | plus: variant.inventory_quantity
+      if variant.inventory_policy == "continue"
+        assign inventory_policy = 'continue'
+      endif
+    else
+      assign track_inventory_status = fasle
+    endif
+  endfor
+  if inventory_quantity > 0
+    if inventory_quantity <= low_stock_threshold
+      assign inventory_status = 'low-stock'
+      assign inventory_text = 'products.product.inventory_status.low_stock' | t
+
+      if settings.low_stock_message != blank
+        assign inventory_text = settings.low_stock_message | replace: '{qty}', inventory_quantity
+      endif
+    else
+      assign inventory_status = 'in-stock'
+      assign inventory_text = 'products.product.inventory_status.in_stock' | t
+      if settings.in_stock_message != blank
+        assign inventory_text = settings.in_stock_message | replace: '{qty}', inventory_quantity
+      endif
+    endif
+  else
+    if inventory_policy == 'continue'
+      assign inventory_status = 'in-stock'
+      assign inventory_text = 'products.product.inventory_status.out_of_stock_continue_selling' | t
+    else
+      assign inventory_status = 'out-of-stock'
+      assign inventory_text = 'products.product.inventory_status.out_of_stock' | t
+    endif
+  endif
+  unless track_inventory_status
+    assign inventory_status = 'in-stock'
+    assign inventory_text = 'products.product.inventory_status.in_stock' | t
+  endunless
+%}
+
+<div
+  class="product-info__inventory-status anm-fade-element" x-intersect.once="$el.classList.add('is-visible')"
+  data-inventory-status="{{ inventory_status }}"
+>
+  <span
+    class="product-info__inventory-label text-small flex items-center gap-1.5 rtl:flex-row-reverse rtl:pr-1 ltr:pl-1"
+    data-inventory-status="{{ inventory_status }}"
+  >
+    <span class="product-info__inventory-dot relative after:animate-ping after:bg-inherit after:absolute after:w-full after:h-full after:rounded-full after:top-0 after:left-0"></span>
+    <span class="flex-1 p-break-words">{{ inventory_text }}</span>
+  </span>
+</div>
