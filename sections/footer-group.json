@@ -47,20 +47,20 @@
             "icon_1": "customer-support",
             "another_icon_1": "",
             "title_1": "Got questions? Call us 24/7",
-            "text_1": "1908474783",
-            "text_link_1": "",
+            "text_1": "7839302804",
+            "text_link_1": "tel:+17839302804",
             "open_new_window_1": false,
             "icon_2": "online-support",
             "another_icon_2": "",
             "title_2": "Need help with your order?",
             "text_2": "Contact",
-            "text_link_2": "",
+            "text_link_2": "/pages/contact",
             "open_new_window_2": false,
             "icon_3": "live-chat",
             "another_icon_3": "",
             "title_3": "Available 24/7 via chat",
             "text_3": "Chat With US",
-            "text_link_3": "",
+            "text_link_3": "https://wa.me/17839302804",
             "open_new_window_3": false,
             "show_social_icons": false
           }
@@ -130,7 +130,7 @@
         "link_list_9jaDpd",
         "link_list_k6qf8P",
         "email_footer_3VCKXg",
-"subfooter_cEETBB"
+        "subfooter_cEETBB"
       ],
       "settings": {
         "number_of_columns": 5,
