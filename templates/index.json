@@ -504,6 +504,8 @@
         "title_size": "medium",
         "title_style": "normal-case",
         "show_collection_image": true,
+        "background_image": "shopify://shop_images/un-fondo-blanco-con-lazos-dorados-para-los-best-sellers.png",
+        "background_image_mobile": "shopify://shop_images/un-fondo-blanco-con-lazos-dorados-para-los-best-sellers.png",
         "enable_gradient_background": false,
         "enable_desktop_slider": true,
         "swiper_on_mobile": true,
