@@ -1054,6 +1054,7 @@
         "image_overlay_slide_JjPJ9f": {
           "type": "image_overlay_slide",
           "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_Feb_25_2026_11_43_09_AM.png",
             "overlay_opacity": 20,
             "subheading": "OFFER ENDS SOON",
             "heading": "Premium Fragrances",
@@ -1097,6 +1098,8 @@
         "image_overlay_slide_XgkkVi": {
           "type": "image_overlay_slide",
           "settings": {
+            "image": "shopify://shop_images/perfumes.png",
+            "image_mobile": "shopify://shop_images/perfumes.png",
             "overlay_opacity": 20,
             "subheading": "",
             "heading": "",
