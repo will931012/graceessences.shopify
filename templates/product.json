@@ -1,1 +1,332 @@
-{"sections": {"main": {"type": "main-product", "blocks": {"labels_and_badges_Eiedzj": {"type": "labels_and_badges", "settings": {"label_position": "on_product_media"}}, "vendor": {"type": "vendor", "settings": {"link_vendor": false, "select_page": "", "link": "", "open_new_window": false}}, "product_title": {"type": "product_title", "settings": {"heading_tag": "h1", "heading_size": "small"}}, "space_KKnHzV": {"type": "space", "settings": {"gap": "small"}}, "rating_J9ax4R": {"type": "rating", "settings": {}}, "identifier": {"type": "identifier", "settings": {}}, "price": {"type": "price", "settings": {"show_tax_and_shipping": false, "text_size_price": 100, "show_sale_label": true, "sale_label_content": "{sale}", "sale_label_light": "rgba(0,0,0,0)", "sale_label_dark": "rgba(0,0,0,0)", "sale_label_text_light": "rgba(0,0,0,0)", "sale_label_text_dark": "rgba(0,0,0,0)"}}, "separator_nUa9hN": {"type": "separator", "settings": {}}, "variant_picker": {"type": "variant_picker", "settings": {"picker_type": "button", "enable_color_swatches": true, "show_variant_label": true, "enable_size_chart": false, "size_chart_label": "Size guide", "associated_option_name": "Size", "size_chart_page": ""}}, "inventory_status_8LgeE4": {"type": "inventory_status", "settings": {}}, "buy_buttons": {"type": "buy_buttons", "settings": {"show_quantity_selector": true, "show_dynamic_checkout": true, "show_gift_card_recipient": false, "show_add_to_compare_button": false, "compare_button_label": "", "pickup_availability": false, "pickup_hide_when_pre_order": true, "preorder_button_label": "Pre-order", "preorder_message": "<p>This product will be available soon. Pre-order now with a special discount.</p>", "preorder_show_dynamic_button": true, "show_background": false, "background_color_light": "rgba(0,0,0,0)", "message_color_light": "rgba(0,0,0,0)", "background_color_dark": "rgba(0,0,0,0)", "message_color_dark": "rgba(0,0,0,0)"}}, "estimate_delivery_MTTqQU": {"type": "estimate_delivery", "settings": {"hide_when_pre_order": false, "message": "<p>Estimated delivery between <strong>earliest_delivery_date and latest_delivery_date.</strong></p>", "enable_tooltip": false, "tooltip_content": "", "show_background": false, "background_color_light": "rgba(0,0,0,0)", "message_color_light": "rgba(0,0,0,0)", "background_color_dark": "rgba(0,0,0,0)", "message_color_dark": "rgba(0,0,0,0)"}}, "text_with_icon_1": {"type": "text_with_icon", "settings": {"icon": "international-shipping", "another_icon": "", "icon_size": 20, "text": "<p>In stock and ready to ship</p>", "highlight_effect": "underline", "text_transform": "none", "background_color_light": "rgba(0,0,0,0)", "text_light": "rgba(0,0,0,0)", "background_color_dark": "rgba(0,0,0,0)", "text_dark": "rgba(0,0,0,0)"}}, "text_with_icon_4": {"type": "text_with_icon", "settings": {"icon": "quality", "another_icon": "", "icon_size": 20, "text": "<p>30-day satisfaction guarantee</p>", "highlight_effect": "underline", "text_transform": "none", "background_color_light": "rgba(0,0,0,0)", "text_light": "rgba(0,0,0,0)", "background_color_dark": "rgba(0,0,0,0)", "text_dark": "rgba(0,0,0,0)"}}, "space_mUrayz": {"type": "space", "settings": {"gap": "small"}}, "collapsible_tab_notas": {"type": "collapsible_tab", "settings": {"open_by_default": true, "icon": "none", "another_icon": "", "use_secondary_background": false, "heading": "Olfactory Notes", "tab_content": "<p>Check the product description for the top, heart and base notes of this fragrance.</p>", "highlight_effect": "underline", "text_transform": "none"}}, "collapsible_tab_concentracion": {"type": "collapsible_tab", "settings": {"open_by_default": false, "icon": "none", "another_icon": "", "use_secondary_background": false, "heading": "Concentration & Intensity", "tab_content": "<p><strong>EDT (Eau de Toilette):</strong> Light fragrance, ideal for everyday wear. Lasts approximately 4-6 hours.</p><p><strong>EDP (Eau de Parfum):</strong> Higher concentration. Lasts 6-8 hours.</p><p><strong>Parfum (Extrait):</strong> Maximum concentration. Lasts more than 8 hours.</p>", "highlight_effect": "underline", "text_transform": "none"}}, "collapsible_tab_autenticidad": {"type": "collapsible_tab", "settings": {"open_by_default": false, "icon": "none", "another_icon": "", "use_secondary_background": false, "heading": "Authenticity Guaranteed", "tab_content": "<p>At Grace Essences we only sell 100% authentic fragrances, sourced directly from official distributors. If you have any questions about your purchase, contact us and we will help.</p>", "highlight_effect": "underline", "text_transform": "none"}}, "collapsible_tab_envios": {"type": "collapsible_tab", "settings": {"open_by_default": false, "icon": "none", "another_icon": "", "use_secondary_background": false, "heading": "Shipping & Returns", "tab_content": "<p>We ship nationwide. If you have any issue with your order, contact us within 30 days of receiving the product and we will resolve it.</p>", "highlight_effect": "underline", "text_transform": "none"}}, "social_sharing": {"type": "social_sharing", "settings": {}}}, "block_order": ["labels_and_badges_Eiedzj", "vendor", "product_title", "space_KKnHzV", "rating_J9ax4R", "identifier", "price", "separator_nUa9hN", "variant_picker", "inventory_status_8LgeE4", "buy_buttons", "estimate_delivery_MTTqQU", "text_with_icon_1", "text_with_icon_4", "space_mUrayz", "collapsible_tab_notas", "collapsible_tab_concentracion", "collapsible_tab_autenticidad", "collapsible_tab_envios", "social_sharing"], "settings": {"enable_sticky_content": true, "make_content_center": false, "desktop_media_width": "default", "media_ratio": "1/1", "show_media_with_variant_selected": false, "option_to_classify_variant_media": "", "zoom_effect": "magnifier", "enable_video_autoplay": true, "enable_microdata": false, "show_breadcrumbs": true, "sticky_add_to_cart_style": "bottom_bar", "sticky_add_to_cart_show_quantity": false, "section_width": "full-width", "padding_top": 16, "padding_bottom": 0, "show_section_divider": false}}, "product_details_Hp67jL": {"type": "product-details", "blocks": {"description_phHN9L": {"type": "description", "settings": {"heading": "", "heading_size": "large", "heading_alignment": "left", "number_of_lines_shown": "none", "read_more_label": "Read more", "see_less_label": "See less"}}, "rich_text_autenticidad": {"type": "rich_text", "settings": {"icon": "authentic", "another_icon": "", "heading": "Authenticity Guaranteed", "heading_size": "medium", "text": "<p>We only sell original fragrances from verified brands and official distributors.</p>", "text_alignment": "left", "highlight_effect": "underline", "text_transform": "none", "select_page": "", "number_of_lines_shown": "none", "read_more_label": "Read more", "see_less_label": "See less", "show_payment_icons": true, "payment_icon": "visa , master , paypal , american_express", "show_border": true, "color_scheme_light": "", "color_scheme_dark": ""}}}, "block_order": ["description_phHN9L", "rich_text_autenticidad"], "settings": {"padding_top": 28, "padding_bottom": 0}}, "product_recommendations_hcJBTH": {"type": "product-recommendations", "settings": {"heading": "You May Also Like", "heading_size": "medium", "heading_tag": "h2", "heading_alignment": "left", "highlight_effect": "underline", "text_transform": "none", "products_to_show": 4, "show_vendor": true, "show_rating": false, "show_quick_view": true, "enable_carousel_desktop": true, "enable_swiper_mobile": true, "auto_play": 4, "columns_desktop": 4, "spacing": 12, "columns_mobile": "2", "spacing_mobile": 8, "section_width": "full-width", "padding_top": 48, "padding_bottom": 64, "show_section_divider": false, "color_scheme_light": "", "color_scheme_dark": ""}}}, "order": ["main", "product_details_Hp67jL", "product_recommendations_hcJBTH"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "labels_and_badges_Eiedzj": {
+          "type": "labels_and_badges",
+          "settings": {
+            "label_position": "on_product_media"
+          }
+        },
+        "vendor": {
+          "type": "vendor",
+          "settings": {
+            "link_vendor": false,
+            "select_page": "",
+            "link": "",
+            "open_new_window": false
+          }
+        },
+        "product_title": {
+          "type": "product_title",
+          "settings": {
+            "heading_tag": "h1",
+            "heading_size": "small"
+          }
+        },
+        "space_KKnHzV": {
+          "type": "space",
+          "settings": {
+            "gap": "small"
+          }
+        },
+        "rating_J9ax4R": {
+          "type": "rating",
+          "settings": {}
+        },
+        "identifier": {
+          "type": "identifier",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_tax_and_shipping": false,
+            "text_size_price": 100,
+            "show_sale_label": true,
+            "sale_label_content": "{sale}",
+            "sale_label_light": "rgba(0,0,0,0)",
+            "sale_label_dark": "rgba(0,0,0,0)",
+            "sale_label_text_light": "rgba(0,0,0,0)",
+            "sale_label_text_dark": "rgba(0,0,0,0)"
+          }
+        },
+        "separator_nUa9hN": {
+          "type": "separator",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "show_variant_label": true,
+            "enable_size_chart": false,
+            "size_chart_label": "Size guide",
+            "associated_option_name": "Size",
+            "size_chart_page": ""
+          }
+        },
+        "inventory_status_8LgeE4": {
+          "type": "inventory_status",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false,
+            "show_add_to_compare_button": false,
+            "compare_button_label": "",
+            "pickup_availability": false,
+            "pickup_hide_when_pre_order": true,
+            "preorder_button_label": "Pre-order",
+            "preorder_message": "<p>This product will be available soon. Pre-order now with a special discount.</p>",
+            "preorder_show_dynamic_button": true,
+            "show_background": false,
+            "background_color_light": "rgba(0,0,0,0)",
+            "message_color_light": "rgba(0,0,0,0)",
+            "background_color_dark": "rgba(0,0,0,0)",
+            "message_color_dark": "rgba(0,0,0,0)"
+          }
+        },
+        "estimate_delivery_MTTqQU": {
+          "type": "estimate_delivery",
+          "settings": {
+            "hide_when_pre_order": false,
+            "message": "<p>Estimated delivery between <strong>earliest_delivery_date and latest_delivery_date.</strong></p>",
+            "enable_tooltip": false,
+            "tooltip_content": "",
+            "show_background": false,
+            "background_color_light": "rgba(0,0,0,0)",
+            "message_color_light": "rgba(0,0,0,0)",
+            "background_color_dark": "rgba(0,0,0,0)",
+            "message_color_dark": "rgba(0,0,0,0)"
+          }
+        },
+        "text_with_icon_1": {
+          "type": "text_with_icon",
+          "settings": {
+            "icon": "international-shipping",
+            "another_icon": "",
+            "icon_size": 20,
+            "text": "<p>In stock and ready to ship</p>",
+            "highlight_effect": "underline",
+            "text_transform": "none",
+            "background_color_light": "rgba(0,0,0,0)",
+            "text_light": "rgba(0,0,0,0)",
+            "background_color_dark": "rgba(0,0,0,0)",
+            "text_dark": "rgba(0,0,0,0)"
+          }
+        },
+        "text_with_icon_4": {
+          "type": "text_with_icon",
+          "settings": {
+            "icon": "quality",
+            "another_icon": "",
+            "icon_size": 20,
+            "text": "<p>30-day satisfaction guarantee</p>",
+            "highlight_effect": "underline",
+            "text_transform": "none",
+            "background_color_light": "rgba(0,0,0,0)",
+            "text_light": "rgba(0,0,0,0)",
+            "background_color_dark": "rgba(0,0,0,0)",
+            "text_dark": "rgba(0,0,0,0)"
+          }
+        },
+        "space_mUrayz": {
+          "type": "space",
+          "settings": {
+            "gap": "small"
+          }
+        },
+        "collapsible_tab_notas": {
+          "type": "collapsible_tab",
+          "settings": {
+            "open_by_default": true,
+            "icon": "none",
+            "another_icon": "",
+            "use_secondary_background": false,
+            "heading": "Olfactory Notes",
+            "tab_content": "<p>Check the product description for the top, heart and base notes of this fragrance.</p>",
+            "highlight_effect": "underline",
+            "text_transform": "none"
+          }
+        },
+        "collapsible_tab_concentracion": {
+          "type": "collapsible_tab",
+          "settings": {
+            "open_by_default": false,
+            "icon": "none",
+            "another_icon": "",
+            "use_secondary_background": false,
+            "heading": "Concentration & Intensity",
+            "tab_content": "<p><strong>EDT (Eau de Toilette):</strong> Light fragrance, ideal for everyday wear. Lasts approximately 4-6 hours.</p><p><strong>EDP (Eau de Parfum):</strong> Higher concentration. Lasts 6-8 hours.</p><p><strong>Parfum (Extrait):</strong> Maximum concentration. Lasts more than 8 hours.</p>",
+            "highlight_effect": "underline",
+            "text_transform": "none"
+          }
+        },
+        "collapsible_tab_autenticidad": {
+          "type": "collapsible_tab",
+          "settings": {
+            "open_by_default": false,
+            "icon": "none",
+            "another_icon": "",
+            "use_secondary_background": false,
+            "heading": "Authenticity Guaranteed",
+            "tab_content": "<p>At Grace Essences we only sell 100% authentic fragrances, sourced directly from official distributors. If you have any questions about your purchase, contact us and we will help.</p>",
+            "highlight_effect": "underline",
+            "text_transform": "none"
+          }
+        },
+        "collapsible_tab_envios": {
+          "type": "collapsible_tab",
+          "settings": {
+            "open_by_default": false,
+            "icon": "none",
+            "another_icon": "",
+            "use_secondary_background": false,
+            "heading": "Shipping & Returns",
+            "tab_content": "<p>We ship nationwide. If you have any issue with your order, contact us within 30 days of receiving the product and we will resolve it.</p>",
+            "highlight_effect": "underline",
+            "text_transform": "none"
+          }
+        },
+        "social_sharing": {
+          "type": "social_sharing",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "labels_and_badges_Eiedzj",
+        "vendor",
+        "product_title",
+        "space_KKnHzV",
+        "rating_J9ax4R",
+        "identifier",
+        "price",
+        "separator_nUa9hN",
+        "variant_picker",
+        "inventory_status_8LgeE4",
+        "buy_buttons",
+        "estimate_delivery_MTTqQU",
+        "text_with_icon_1",
+        "text_with_icon_4",
+        "space_mUrayz",
+        "collapsible_tab_notas",
+        "collapsible_tab_concentracion",
+        "collapsible_tab_autenticidad",
+        "collapsible_tab_envios",
+        "social_sharing"
+      ],
+      "settings": {
+        "enable_sticky_content": true,
+        "make_content_center": false,
+        "desktop_media_width": "default",
+        "media_ratio": "1/1",
+        "show_media_with_variant_selected": false,
+        "option_to_classify_variant_media": "",
+        "zoom_effect": "magnifier",
+        "enable_video_autoplay": true,
+        "enable_microdata": false,
+        "show_breadcrumbs": true,
+        "sticky_add_to_cart_style": "bottom_bar",
+        "sticky_add_to_cart_show_quantity": false,
+        "section_width": "full-width",
+        "padding_top": 16,
+        "padding_bottom": 0,
+        "show_section_divider": false
+      }
+    },
+    "product_details_Hp67jL": {
+      "type": "product-details",
+      "blocks": {
+        "description_phHN9L": {
+          "type": "description",
+          "settings": {
+            "heading": "",
+            "heading_size": "large",
+            "heading_alignment": "left",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less"
+          }
+        },
+        "rich_text_autenticidad": {
+          "type": "rich_text",
+          "settings": {
+            "icon": "authentic",
+            "another_icon": "",
+            "heading": "Authenticity Guaranteed",
+            "heading_size": "medium",
+            "text": "<p>We only sell original fragrances from verified brands and official distributors.</p>",
+            "text_alignment": "left",
+            "highlight_effect": "underline",
+            "text_transform": "none",
+            "select_page": "",
+            "number_of_lines_shown": "none",
+            "read_more_label": "Read more",
+            "see_less_label": "See less",
+            "show_payment_icons": true,
+            "payment_icon": "visa , master , paypal , american_express",
+            "show_border": true,
+            "color_scheme_light": "",
+            "color_scheme_dark": ""
+          }
+        }
+      },
+      "block_order": [
+        "description_phHN9L",
+        "rich_text_autenticidad"
+      ],
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 0
+      }
+    },
+    "product_recommendations_hcJBTH": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "You May Also Like",
+        "heading_size": "medium",
+        "heading_tag": "h2",
+        "heading_alignment": "left",
+        "highlight_effect": "underline",
+        "text_transform": "none",
+        "products_to_show": 4,
+        "show_vendor": true,
+        "show_rating": false,
+        "show_quick_view": true,
+        "enable_carousel_desktop": true,
+        "enable_swiper_mobile": true,
+        "auto_play": 4,
+        "columns_desktop": 4,
+        "spacing": 12,
+        "columns_mobile": "2",
+        "spacing_mobile": 8,
+        "section_width": "full-width",
+        "padding_top": 48,
+        "padding_bottom": 64,
+        "show_section_divider": false,
+        "color_scheme_light": "",
+        "color_scheme_dark": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product_details_Hp67jL",
+    "product_recommendations_hcJBTH"
+  ]
+}
