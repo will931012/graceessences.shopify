@@ -11,3 +11,11 @@ coverage/
 .env
 .env.*
 README.md
+*.tmp*
+*.tmp
+assets/theme.css
+assets/buttons.css
+assets/gift-card.css
+assets/page.css
+assets/product-details.css
+assets/rtl.css

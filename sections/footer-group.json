@@ -92,38 +92,8 @@
             "open_by_default": false,
             "number_of_columns_wide": 1,
             "heading_email": "Get exclusive Offers and Updates",
-            "subtext_email": "<p>Join our Newsletter for Exclusive Tech Deals, Appliance Care Tips & Early Access to Offers & Deals.</p>",
+            "subtext_email": "<p>Join our Newsletter for exclusive fragrance launches, special offers & early access to deals.</p>",
             "show_social_icons": true
-          }
-        },
-        "link_list_8B4iba": {
-          "type": "link_list",
-          "settings": {
-            "open_by_default": false,
-            "number_of_columns_wide": 5,
-            "heading_menu": "Wearables & Smart Devices",
-            "menu": "",
-            "menu_desktop_layout": "horizontal"
-          }
-        },
-        "link_list_jnDW37": {
-          "type": "link_list",
-          "settings": {
-            "open_by_default": false,
-            "number_of_columns_wide": 5,
-            "heading_menu": "Laptops & Tablets",
-            "menu": "",
-            "menu_desktop_layout": "horizontal"
-          }
-        },
-        "link_list_q6dFHM": {
-          "type": "link_list",
-          "settings": {
-            "open_by_default": false,
-            "number_of_columns_wide": 5,
-            "heading_menu": "Home Appliances",
-            "menu": "",
-            "menu_desktop_layout": "horizontal"
           }
         },
         "subfooter_cEETBB": {
@@ -133,7 +103,7 @@
             "show_payment_icons": true,
             "payment_icon": "visa , master , diners_club , paypal , american_express",
             "show_copyright": true,
-            "show_powered_by": true,
+            "show_powered_by": false,
             "custom_copyright_text": "",
             "padding_top": 20,
             "padding_bottom": 20,
@@ -151,10 +121,7 @@
         "link_list_9jaDpd",
         "link_list_k6qf8P",
         "email_footer_3VCKXg",
-        "link_list_8B4iba",
-        "link_list_jnDW37",
-        "link_list_q6dFHM",
-        "subfooter_cEETBB"
+"subfooter_cEETBB"
       ],
       "settings": {
         "number_of_columns": 5,

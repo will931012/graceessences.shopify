@@ -1,0 +1,137 @@
+{
+  "sections": {
+    "main_collection_banner_qCnyfN": {
+      "type": "main-collection-banner",
+      "blocks": {
+        "breadcrumbs_JEjXB9": {
+          "type": "breadcrumbs",
+          "settings": {
+            "breadcrumbs_background_light": "rgba(0,0,0,0)",
+            "breadcrumbs_text_light": "#2d4895",
+            "breadcrumbs_text_link_light": "#2d4895",
+            "breadcrumbs_background_dark": "rgba(0,0,0,0)",
+            "breadcrumbs_text_dark": "rgba(0,0,0,0)",
+            "breadcrumbs_text_link_dark": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "breadcrumbs_JEjXB9"
+      ],
+      "settings": {
+        "show_collection_image": true,
+        "image_overlay_opacity": 0,
+        "show_collection_name": false,
+        "title_size": "large",
+        "heading_tag": "h1",
+        "title_position": "left",
+        "desktop_height": "450px",
+        "full_width_title": true,
+        "title_position_mobile": "left",
+        "mobile_height": "250px",
+        "section_width": "full-width",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "color_scheme_light": "",
+        "color_scheme_dark": ""
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "block_order": [],
+      "blocks": {},
+      "settings": {
+        "products_per_page": 18,
+        "products_per_row_on_desktop": 3,
+        "products_per_row_on_mobile": "2",
+        "pagination": "click_to_load",
+        "show_vendor": true,
+        "show_rating": true,
+        "show_quickview": true,
+        "show_description": true,
+        "enable_filtering": true,
+        "sticky_filtering": false,
+        "filter_type": "drawer",
+        "default_hide_filtering": false,
+        "expand_filter": false,
+        "enable_collection_count": true,
+        "enable_sorting": true,
+        "enable_advanced_filter": false,
+        "key_value": "",
+        "hide_unavaiable_filter": false,
+        "enable_desktop_slider": false,
+        "image_ratio_filter": "round",
+        "spacing_desktop": 16,
+        "spacing_mobile": 10,
+        "section_width": "full-width",
+        "padding_top": 32,
+        "padding_bottom": 64,
+        "show_section_divider": false,
+        "color_scheme_light": "",
+        "color_scheme_dark": ""
+      }
+    },
+    "related_collection_BKKBr7": {
+      "type": "related-collection",
+      "name": "Related collections",
+      "settings": {
+        "heading": "Explorar otras categorias",
+        "heading_size": "medium",
+        "heading_tag": "h2",
+        "heading_alignment": "left",
+        "image_ratio": "square",
+        "desktop_title_size": "medium",
+        "mobile_title_size": "small",
+        "show_text_overlay": false,
+        "content_alignment": "center",
+        "content_position": "center",
+        "image_overlay_opacity": 5,
+        "enabled_background": false,
+        "collection_card_color_scheme_light": "",
+        "collection_card_color_scheme_dark": "",
+        "show_item_count": true,
+        "enable_desktop_slider": true,
+        "swiper_on_mobile": true,
+        "columns_desktop": 4,
+        "spacing": 32,
+        "columns_mobile": 2,
+        "spacing_mobile": 16,
+        "max_collections": 4,
+        "section_width": "full-width-padded",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "show_section_divider": false,
+        "color_scheme_light": "scheme-4",
+        "color_scheme_dark": "scheme-8"
+      }
+    },
+    "collection_description_pq7Uy3": {
+      "type": "collection-description",
+      "settings": {
+        "heading": "Collection description",
+        "heading_size": "medium",
+        "heading_tag": "h2",
+        "heading_alignment": "left",
+        "show_heading": true,
+        "number_of_lines_shown": "none",
+        "read_more_label": "Read more",
+        "see_less_label": "See less",
+        "text_size": "medium",
+        "desktop_content_alignment": "md:text-left",
+        "mobile_content_alignment": "text-left",
+        "section_width": "full-width",
+        "padding_top": 48,
+        "padding_bottom": 72,
+        "show_section_divider": false,
+        "color_scheme_light": "",
+        "color_scheme_dark": ""
+      }
+    }
+  },
+  "order": [
+    "main_collection_banner_qCnyfN",
+    "product-grid",
+    "related_collection_BKKBr7",
+    "collection_description_pq7Uy3"
+  ]
+}
