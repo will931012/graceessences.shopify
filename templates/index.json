@@ -208,7 +208,7 @@
             "icon": "none",
             "another_icon": "",
             "icon_size": 45,
-            "sub_title": "Laptops & Tablets",
+            "sub_title": "Perfumes & Testers",
             "title": "Fragrances for Him",
             "title_size": "small",
             "text": "",
@@ -354,7 +354,7 @@
         "padding_top": 24,
         "padding_bottom": 32,
         "show_section_divider": false,
-        "color_scheme_light": "scheme-5",
+        "color_scheme_light": "scheme-4",
         "color_scheme_dark": "scheme-7"
       }
     },
