@@ -145,7 +145,7 @@
           "type": "promotion",
           "settings": {
             "image": "shopify://shop_images/no-pongas-el-perfume-saliendo-solo-la-mujer-y-el-frasco.png",
-            "image_mobile": "shopify://shop_images/una-mujer-hechandose-perfume.png",
+            "image_mobile": "shopify://shop_images/no-pongas-el-perfume-saliendo-solo-la-mujer-y-el-frasco.png",
             "high_priority_image": true,
             "image_link": "/collections/women",
             "open_new_window": false,
