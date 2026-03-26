@@ -553,6 +553,7 @@
         "promotion_6QBjka": {
           "type": "promotion",
           "settings": {
+            "image": "shopify://shop_images/una-foto-para-new-arrivals-vertical-oriented.png",
             "high_priority_image": false,
             "image_link": "",
             "open_new_window": false,
@@ -598,6 +599,7 @@
         "promotion_hbHWM8": {
           "type": "promotion",
           "settings": {
+            "image": "shopify://shop_images/ejemplos-de-testers-perfumes.png",
             "high_priority_image": false,
             "image_link": "",
             "open_new_window": false,
@@ -643,6 +645,7 @@
         "promotion_H7VR8D": {
           "type": "promotion",
           "settings": {
+            "image": "shopify://shop_images/una-imagen-de-un-gif-set-de-perfumes-en-formato-2-8.png",
             "high_priority_image": false,
             "image_link": "",
             "open_new_window": false,
@@ -688,6 +691,7 @@
         "promotion_YGRpRp": {
           "type": "promotion",
           "settings": {
+            "image": "shopify://shop_images/examples-of-mini-perfumes.png",
             "high_priority_image": false,
             "image_link": "",
             "open_new_window": false,
