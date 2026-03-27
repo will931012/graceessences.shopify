@@ -600,7 +600,8 @@
         "promotion_hbHWM8": {
           "type": "promotion",
           "settings": {
-            "image": "shopify://shop_images/ejemplos-de-testers-perfumes.png",
+            "image": "shopify://shop_images/Just_in_Time.jpg",
+            "image_mobile": "shopify://shop_images/Just_in_Time.jpg",
             "high_priority_image": false,
             "image_link": "/collections/testers",
             "open_new_window": false,
@@ -646,7 +647,8 @@
         "promotion_H7VR8D": {
           "type": "promotion",
           "settings": {
-            "image": "shopify://shop_images/una-imagen-de-un-gif-set-de-perfumes-en-formato-2-8.png",
+            "image": "shopify://shop_images/download_3.jpg",
+            "image_mobile": "shopify://shop_images/download_3.jpg",
             "high_priority_image": false,
             "image_link": "/collections/sets",
             "open_new_window": false,
@@ -692,7 +694,8 @@
         "promotion_YGRpRp": {
           "type": "promotion",
           "settings": {
-            "image": "shopify://shop_images/examples-of-mini-perfumes.png",
+            "image": "shopify://shop_images/Tocca_Perfumes.jpg",
+            "image_mobile": "shopify://shop_images/Tocca_Perfumes.jpg",
             "high_priority_image": false,
             "image_link": "/collections/mini",
             "open_new_window": false,
