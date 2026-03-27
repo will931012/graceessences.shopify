@@ -144,8 +144,8 @@
         "promotion_WwCdX6": {
           "type": "promotion",
           "settings": {
-            "image": "shopify://shop_images/no-pongas-el-perfume-saliendo-solo-la-mujer-y-el-frasco.png",
-            "image_mobile": "shopify://shop_images/no-pongas-el-perfume-saliendo-solo-la-mujer-y-el-frasco.png",
+            "image": "shopify://shop_images/download.jpg",
+            "image_mobile": "shopify://shop_images/download.jpg",
             "high_priority_image": true,
             "image_link": "/collections/women",
             "open_new_window": false,
@@ -2530,6 +2530,10 @@
         "background_color_dark": "rgba(0,0,0,0)",
         "color_icon_dark": "rgba(0,0,0,0)"
       }
+    },
+    "1774645606821f339a": {
+      "type": "_blocks",
+      "settings": {}
     }
   },
   "order": [
@@ -2549,6 +2553,7 @@
     "featured_collections_d6mqiq",
     "testimonials_cUaTb4",
     "faq_FPQbGW",
-    "text_columns_with_icons_3cbzQV"
+    "text_columns_with_icons_3cbzQV",
+    "1774645606821f339a"
   ]
 }
