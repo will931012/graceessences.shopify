@@ -1,6 +1,423 @@
+{% doc %}
+  @prompt
+    Add a hover animation effect to the "For Her" promotion banner image in the promotion grid section. When a user hovers over the banner, create a CSS overlay or particle effect that simulates floating or swirling petals on hover, layered on top of the existing banner image. The effect should be elegant and subtle, fitting a beauty or fragrance brand aesthetic.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-petal-banner-{{ ai_gen_id }} {
+    position: relative;
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: {{ block.settings.border_radius }}px;
+  }
+
+  .ai-petal-banner__image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    display: block;
+  }
+
+  .ai-petal-banner__image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+
+  .ai-petal-banner-{{ ai_gen_id }}:hover .ai-petal-banner__image-{{ ai_gen_id }} {
+    transform: scale(1.05);
+  }
+
+  .ai-petal-banner__overlay-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+
+  .ai-petal-banner-{{ ai_gen_id }}:hover .ai-petal-banner__overlay-{{ ai_gen_id }} {
+    opacity: 1;
+  }
+
+  .ai-petal-banner__petal-{{ ai_gen_id }} {
+    position: absolute;
+    width: {{ block.settings.petal_size }}px;
+    height: {{ block.settings.petal_size }}px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .ai-petal-banner-{{ ai_gen_id }}:hover .ai-petal-banner__petal-{{ ai_gen_id }} {
+    animation: ai-petal-float-{{ ai_gen_id }} var(--ai-petal-duration) ease-in-out forwards;
+  }
+
+  @keyframes ai-petal-float-{{ ai_gen_id }} {
+    0% {
+      opacity: 0;
+      transform: translate(0, 0) rotate(0deg) scale(0);
+    }
+    10% {
+      opacity: {{ block.settings.petal_opacity }};
+      transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(
+          var(--ai-petal-x-end),
+          var(--ai-petal-y-end)
+        )
+        rotate(var(--ai-petal-rotation))
+        scale(0.5);
+    }
+  }
+
+  .ai-petal-banner__content-{{ ai_gen_id }} {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    width: 90%;
+  }
+
+  .ai-petal-banner__title-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.title_size }}px;
+    margin: 0 0 12px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .ai-petal-banner__subtitle-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.subtitle_size }}px;
+    margin: 0 0 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .ai-petal-banner__button-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: 12px 32px;
+    background-color: {{ block.settings.button_bg_color }};
+    color: {{ block.settings.button_text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    transition: all 0.3s ease;
+    font-size: {{ block.settings.button_text_size }}px;
+  }
+
+  .ai-petal-banner__button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_bg_color }};
+    color: {{ block.settings.button_hover_text_color }};
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .ai-petal-banner__placeholder-{{ ai_gen_id }} {
+    background-color: #f4f4f4;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-petal-banner__placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 500px;
+  }
+
+  .ai-petal-banner__empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-petal-banner__title-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.title_size }}px * 0.7);
+    }
+
+    .ai-petal-banner__subtitle-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.subtitle_size }}px * 0.8);
+    }
+
+    .ai-petal-banner__button-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.button_text_size }}px * 0.9);
+      padding: 10px 24px;
+    }
+  }
+{% endstyle %}
+
+<div
+  class="ai-petal-banner-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-petal-banner__image-wrapper-{{ ai_gen_id }}">
+    {% if block.settings.banner_image %}
+      <img
+        src="{{ block.settings.banner_image | image_url: width: 2000 }}"
+        alt="{{ block.settings.banner_image.alt | escape }}"
+        loading="lazy"
+        width="{{ block.settings.banner_image.width }}"
+        height="{{ block.settings.banner_image.height }}"
+        class="ai-petal-banner__image-{{ ai_gen_id }}"
+      >
+    {% else %}
+      <div class="ai-petal-banner__placeholder-{{ ai_gen_id }}">
+        {{ 'hero-apparel-1' | placeholder_svg_tag }}
+        <div class="ai-petal-banner__empty-state-{{ ai_gen_id }}">
+          Add a banner image to get started
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="ai-petal-banner__overlay-{{ ai_gen_id }}">
+      {% for i in (1..30) %}
+        {% assign x_start = forloop.index | times: 13 | modulo: 100 %}
+        {% assign y_start = forloop.index | times: 17 | modulo: 100 %}
+        {% assign x_end = forloop.index | times: 23 | modulo: 200 | minus: 100 %}
+        {% assign y_end = forloop.index | times: 29 | modulo: 150 | plus: 50 %}
+        {% assign rotation = forloop.index | times: 37 | modulo: 720 %}
+        {% assign duration = forloop.index | modulo: 3 | plus: 3 %}
+        {% assign delay = forloop.index | times: 0.1 %}
+
+        <svg
+          class="ai-petal-banner__petal-{{ ai_gen_id }}"
+          style="
+            left: {{ x_start }}%;
+            top: {{ y_start }}%;
+            --ai-petal-x-end: {{ x_end }}px;
+            --ai-petal-y-end: {{ y_end }}px;
+            --ai-petal-rotation: {{ rotation }}deg;
+            --ai-petal-duration: {{ duration }}s;
+            animation-delay: {{ delay }}s;
+          "
+          viewBox="0 0 24 24"
+          fill="{{ block.settings.petal_color }}"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M12 2C12 2 8 6 8 10C8 12.2091 9.79086 14 12 14C14.2091 14 16 12.2091 16 10C16 6 12 2 12 2Z" opacity="0.9"/>
+          <path d="M12 22C12 22 16 18 16 14C16 11.7909 14.2091 10 12 10C9.79086 10 8 11.7909 8 14C8 18 12 22 12 22Z" opacity="0.9"/>
+          <path d="M2 12C2 12 6 8 10 8C12.2091 8 14 9.79086 14 12C14 14.2091 12.2091 16 10 16C6 16 2 12 2 12Z" opacity="0.8"/>
+          <path d="M22 12C22 12 18 16 14 16C11.7909 16 10 14.2091 10 12C10 9.79086 11.7909 8 14 8C18 8 22 12 22 12Z" opacity="0.8"/>
+        </svg>
+      {% endfor %}
+    </div>
+
+    {% if block.settings.show_content %}
+      <div class="ai-petal-banner__content-{{ ai_gen_id }}">
+        {% if block.settings.title != blank %}
+          <h2 class="ai-petal-banner__title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+        {% endif %}
+
+        {% if block.settings.subtitle != blank %}
+          <p class="ai-petal-banner__subtitle-{{ ai_gen_id }}">{{ block.settings.subtitle }}</p>
+        {% endif %}
+
+        {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+          <a
+            href="{{ block.settings.button_link }}"
+            class="ai-petal-banner__button-{{ ai_gen_id }}"
+          >
+            {{ block.settings.button_text }}
+          </a>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Floating petals banner",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner image"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Petal effect"
+    },
+    {
+      "type": "color",
+      "id": "petal_color",
+      "label": "Petal color",
+      "default": "#FFB6C1"
+    },
+    {
+      "type": "range",
+      "id": "petal_size",
+      "label": "Petal size",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "petal_opacity",
+      "label": "Petal opacity",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "default": 0.8
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_content",
+      "label": "Show text overlay",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "For Her"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title size",
+      "min": 20,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Elegant fragrances for every moment"
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size",
+      "label": "Subtitle size",
+      "min": 12,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "range",
+      "id": "button_text_size",
+      "label": "Button text size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_bg_color",
+      "label": "Button hover background",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text_color",
+      "label": "Button hover text color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "label": "Button border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "Floating petals banner"
+    }
+  ],
+  "tag": null
+}
 {% endschema %}
