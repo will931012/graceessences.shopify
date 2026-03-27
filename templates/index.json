@@ -191,8 +191,8 @@
         "promotion_7C6LLi": {
           "type": "promotion",
           "settings": {
-            "image": "shopify://shop_images/un-hombre-echandose-perfume.png",
-            "image_mobile": "shopify://shop_images/un-hombre-echandose-perfume.png",
+            "image": "shopify://shop_images/download_2.jpg",
+            "image_mobile": "shopify://shop_images/download_2.jpg",
             "high_priority_image": true,
             "image_link": "/collections/men",
             "open_new_window": false,
