@@ -2175,6 +2175,7 @@
         "logo_cnjDx3": {
           "type": "logo",
           "settings": {
+            "image_logo": "shopify://shop_images/Byredo.jpg",
             "image_link": "",
             "open_new_window": false
           }
@@ -2182,6 +2183,7 @@
         "logo_kHKG6L": {
           "type": "logo",
           "settings": {
+            "image_logo": "shopify://shop_images/jpg.jpg",
             "image_link": "",
             "open_new_window": false
           }
@@ -2189,6 +2191,7 @@
         "logo_gGyHtM": {
           "type": "logo",
           "settings": {
+            "image_logo": "shopify://shop_images/cartier.jpg",
             "image_link": "",
             "open_new_window": false
           }
@@ -2196,6 +2199,7 @@
         "logo_rePJxA": {
           "type": "logo",
           "settings": {
+            "image_logo": "shopify://shop_images/jimmychoo.jpg",
             "image_link": "",
             "open_new_window": false
           }
@@ -2211,6 +2215,7 @@
         "logo_npVDTd": {
           "type": "logo",
           "settings": {
+            "image_logo": "shopify://shop_images/versace.jpg",
             "image_link": "",
             "open_new_window": false
           }
