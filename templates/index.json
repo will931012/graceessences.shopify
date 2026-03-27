@@ -238,8 +238,8 @@
         "promotion_bFU6Dj": {
           "type": "promotion",
           "settings": {
-            "image": "shopify://shop_images/una-imagen-de-un-gif-set-de-perfumes-en-formato-2-8.png",
-            "image_mobile": "shopify://shop_images/un-gift-set-de-perfumes-envuelto-en-lazos-de-ragalo.png",
+            "image": "shopify://shop_images/download_3.jpg",
+            "image_mobile": "shopify://shop_images/download_3.jpg",
             "high_priority_image": true,
             "image_link": "/collections/sets",
             "open_new_window": false,
@@ -285,8 +285,8 @@
         "promotion_LxfCck": {
           "type": "promotion",
           "settings": {
-            "image": "shopify://shop_images/una-imagen-que-sea-la-presentacion-de-la-collecion-testers-perfumes.png",
-            "image_mobile": "shopify://shop_images/una-imagen-que-sea-la-presentacion-de-la-collecion-testers-perfumes.png",
+            "image": "shopify://shop_images/5b97376a378a5f8ac78974d29174ce88.jpg",
+            "image_mobile": "shopify://shop_images/5b97376a378a5f8ac78974d29174ce88.jpg",
             "high_priority_image": true,
             "image_link": "/collections/testers",
             "open_new_window": false,
