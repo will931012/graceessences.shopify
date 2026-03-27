@@ -2329,41 +2329,6 @@
         "timer_background_dark": ""
       }
     },
-    "video_B8CnbM": {
-      "type": "video",
-      "name": "t:global.video.video",
-      "settings": {
-        "show_hero": false,
-        "sub_heading_video": "",
-        "heading": "Find Your Perfect Fragrance",
-        "heading_size": "large",
-        "heading_tag": "h2",
-        "text": "",
-        "text_size": "large",
-        "highlight_effect": "underline",
-        "text_transform": "none",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "video_alt_text": "",
-        "show_sound_control": false,
-        "enable_video_autoplay": true,
-        "overlay_opacity": 20,
-        "button_label": "Get My Deals",
-        "show_button_style": "secondary",
-        "button_link": "/collections/all",
-        "open_new_window": false,
-        "content_position": "center",
-        "content_horizontal": 50,
-        "content_vertical": 50,
-        "content_alignment": "center",
-        "desktop_height": "550px",
-        "mobile_height": "300px",
-        "section_width": "full-width",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "color_scheme_light": "scheme-3",
-        "color_scheme_dark": ""
-      }
-    },
     "testimonials_cUaTb4": {
       "type": "testimonials",
       "blocks": {
@@ -2510,105 +2475,6 @@
         "column_background_color_light": "#ffffff",
         "color_scheme_dark": "scheme-2",
         "column_background_color_dark": "#171a22"
-      }
-    },
-    "featured_collections_KDBxyU": {
-      "type": "featured-collections",
-      "blocks": {
-        "collection_GUjJbN": {
-          "type": "collection",
-          "settings": {
-            "collection": "azzaro",
-            "heading": "",
-            "show_vendor": true,
-            "show_product_rating": true,
-            "show_quickview": true
-          }
-        },
-        "collection_whxPmD": {
-          "type": "collection",
-          "disabled": true,
-          "settings": {
-            "collection": "yves-saint-laurent",
-            "heading": "",
-            "show_vendor": true,
-            "show_product_rating": false,
-            "show_quickview": true
-          }
-        },
-        "collection_9gzmqU": {
-          "type": "collection",
-          "disabled": true,
-          "settings": {
-            "collection": "versace",
-            "heading": "",
-            "show_vendor": true,
-            "show_product_rating": false,
-            "show_quickview": true
-          }
-        }
-      },
-      "block_order": [
-        "collection_GUjJbN",
-        "collection_whxPmD",
-        "collection_9gzmqU"
-      ],
-      "settings": {
-        "subheading": "",
-        "heading": "More Fragrances to Explore",
-        "heading_size": "medium",
-        "heading_tag": "h2",
-        "heading_alignment": "center",
-        "mobile_heading_alignment": "center",
-        "highlight_effect": "underline",
-        "text_transform": "none",
-        "view_all_button_label": "",
-        "view_all_button_position": "above",
-        "view_all_button_style": "button",
-        "title_size": "medium",
-        "title_style": "capitalize",
-        "show_collection_image": true,
-        "enable_gradient_background": false,
-        "enable_desktop_slider": true,
-        "swiper_on_mobile": true,
-        "change_slides_speed": 4,
-        "show_navigation_arrows": true,
-        "show_background_product": false,
-        "desktop_side_padding": 18,
-        "mobile_side_padding": 12,
-        "background_color_product_light": "#ffffff",
-        "background_color_product_dark": "#171a22",
-        "enable_countdown": false,
-        "countdown_text": "Hurry up! Get the best deal at best price.",
-        "text_size": "medium",
-        "timezone": "-4",
-        "end_year": 2025,
-        "end_month": "11",
-        "end_day": "20",
-        "end_hour": "0",
-        "end_minute": "0",
-        "show_border_around_timer": false,
-        "desktop_products_per_row": 6,
-        "desktop_number_of_rows": 3,
-        "spacing": 12,
-        "mobile_products_per_row": "2",
-        "spacing_mobile": 8,
-        "section_width": "full-width-padded",
-        "padding_top": 48,
-        "padding_bottom": 32,
-        "show_section_divider": false,
-        "color_scheme_light": "scheme-4",
-        "color_background_light": "#ffffff",
-        "countdown_text_light": "",
-        "color_timer_light": "",
-        "color_line_light": "",
-        "timer_background_light": "",
-        "color_scheme_dark": "scheme-8",
-        "color_background_dark": "rgba(0,0,0,0)",
-        "countdown_text_dark": "",
-        "color_timer_dark": "",
-        "color_line_dark": "",
-        "timer_background_dark": ""
       }
     },
     "faq_FPQbGW": {
@@ -2833,9 +2699,7 @@
     "promotion_grid_h3mXjB",
     "logo_list_LjU3Tm",
     "featured_collections_d6mqiq",
-    "video_B8CnbM",
     "testimonials_cUaTb4",
-    "featured_collections_KDBxyU",
     "faq_FPQbGW",
     "text_columns_with_icons_3cbzQV"
   ]
