@@ -553,7 +553,8 @@
         "promotion_6QBjka": {
           "type": "promotion",
           "settings": {
-            "image": "shopify://shop_images/una-foto-para-new-arrivals-vertical-oriented.png",
+            "image": "shopify://shop_images/download_4.jpg",
+            "image_mobile": "shopify://shop_images/download_4.jpg",
             "high_priority_image": false,
             "image_link": "/collections/perfumes",
             "open_new_window": false,
@@ -584,7 +585,7 @@
             "media_position": "top",
             "line_1": "Save",
             "line_1_size": "medium",
-            "line_2": "45%",
+            "line_2": "20%",
             "line_2_size": "small",
             "line_3": "",
             "line_3_size": "medium",
