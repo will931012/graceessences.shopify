@@ -1203,62 +1203,13 @@
         "featured_collection_PaEA7T": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "armaf"
           }
         },
         "featured_collection_xNCrGC": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_aNhaHH": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_CrEaeb": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_etgwPL": {
-          "type": "featured_collection",
-          "disabled": true,
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_q6dpzY": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_rNPpUp": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_EmxiwG": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_gxagDi": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_nyEieY": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
+            "collection": "chloe"
           }
         }
       },
@@ -1270,15 +1221,7 @@
         "featured_collection_THXjiP",
         "featured_collection_4KDD3g",
         "featured_collection_PaEA7T",
-        "featured_collection_xNCrGC",
-        "featured_collection_aNhaHH",
-        "featured_collection_CrEaeb",
-        "featured_collection_etgwPL",
-        "featured_collection_q6dpzY",
-        "featured_collection_rNPpUp",
-        "featured_collection_EmxiwG",
-        "featured_collection_gxagDi",
-        "featured_collection_nyEieY"
+        "featured_collection_xNCrGC"
       ],
       "settings": {
         "heading": "",
