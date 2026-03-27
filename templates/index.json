@@ -1908,6 +1908,8 @@
         "promotion_DGTzqj": {
           "type": "promotion",
           "settings": {
+            "image": "shopify://shop_images/floral-aromatic-elements.png",
+            "image_mobile": "shopify://shop_images/floral-aromatic-elements.png",
             "high_priority_image": false,
             "image_link": "",
             "open_new_window": false,
@@ -1953,6 +1955,7 @@
         "promotion_CmiUix": {
           "type": "promotion",
           "settings": {
+            "image": "shopify://shop_images/oriental-aromas.png",
             "high_priority_image": false,
             "image_link": "",
             "open_new_window": false,
@@ -1998,6 +2001,8 @@
         "promotion_RMCK7X": {
           "type": "promotion",
           "settings": {
+            "image": "shopify://shop_images/fresh-aromatic-elements.png",
+            "image_mobile": "shopify://shop_images/fresh-aromatic-elements.png",
             "high_priority_image": false,
             "image_link": "",
             "open_new_window": false,
@@ -2043,6 +2048,8 @@
         "promotion_RFVYtd": {
           "type": "promotion",
           "settings": {
+            "image": "shopify://shop_images/woody-aromatic-elements.png",
+            "image_mobile": "shopify://shop_images/woody-aromatic-elements.png",
             "high_priority_image": false,
             "image_link": "",
             "open_new_window": false,
@@ -2088,6 +2095,8 @@
         "promotion_YNLzV8": {
           "type": "promotion",
           "settings": {
+            "image": "shopify://shop_images/citrus-aromatic-elements.png",
+            "image_mobile": "shopify://shop_images/citrus-aromatic-elements.png",
             "high_priority_image": false,
             "image_link": "",
             "open_new_window": false,
