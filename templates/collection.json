@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main_collection_banner_qCnyfN": {
@@ -19,7 +28,7 @@
         "breadcrumbs_JEjXB9"
       ],
       "settings": {
-        "show_collection_image": true,
+        "show_collection_image": false,
         "image_overlay_opacity": 0,
         "show_collection_name": false,
         "title_size": "large",
@@ -75,7 +84,7 @@
             "subheading": "",
             "heading": "Promotion block",
             "title_size": "small",
-            "content": "<p>Describe a promotion, make announcements, or welcome customers to your store.<\/p>",
+            "content": "<p>Describe a promotion, make announcements, or welcome customers to your store.</p>",
             "text_size": "medium",
             "highlight_effect": "underline",
             "text_transform": "none",
@@ -144,8 +153,8 @@
         "image_ratio": "square",
         "desktop_title_size": "medium",
         "mobile_title_size": "small",
-        "show_text_overlay": false,
         "content_alignment": "center",
+        "show_text_overlay": false,
         "content_position": "center",
         "image_overlay_opacity": 5,
         "enabled_background": false,
