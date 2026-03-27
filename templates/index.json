@@ -201,7 +201,7 @@
             "show_sound_control": false,
             "enable_video_autoplay": false,
             "enable_content_overlay": true,
-            "content_position": "top",
+            "content_position": "bottom",
             "overlay_opacity": 30,
             "number_of_columns": 1,
             "number_of_row": 1,
@@ -229,8 +229,8 @@
             "line_3_size": "small",
             "sale_label_position": "top-right",
             "sale_label_style": "circle",
-            "color_scheme_light": "scheme-1",
-            "color_scheme_dark": "scheme-1",
+            "color_scheme_light": "",
+            "color_scheme_dark": "",
             "sale_label_background_color": "#e4e670",
             "sale_label_color": "#100f0f"
           }
@@ -248,7 +248,7 @@
             "show_sound_control": false,
             "enable_video_autoplay": false,
             "enable_content_overlay": true,
-            "content_position": "top",
+            "content_position": "bottom",
             "overlay_opacity": 30,
             "number_of_columns": 1,
             "number_of_row": 1,
@@ -276,8 +276,8 @@
             "line_3_size": "small",
             "sale_label_position": "top-left",
             "sale_label_style": "circle",
-            "color_scheme_light": "scheme-1",
-            "color_scheme_dark": "scheme-1",
+            "color_scheme_light": "",
+            "color_scheme_dark": "",
             "sale_label_background_color": "#e6fa7d",
             "sale_label_color": "#0e1016"
           }
@@ -295,7 +295,7 @@
             "show_sound_control": false,
             "enable_video_autoplay": false,
             "enable_content_overlay": true,
-            "content_position": "top",
+            "content_position": "bottom",
             "overlay_opacity": 30,
             "number_of_columns": 1,
             "number_of_row": 1,
@@ -323,8 +323,8 @@
             "line_3_size": "small",
             "sale_label_position": "bottom-left",
             "sale_label_style": "circle",
-            "color_scheme_light": "scheme-1",
-            "color_scheme_dark": "scheme-1",
+            "color_scheme_light": "",
+            "color_scheme_dark": "",
             "sale_label_background_color": "#0051ba",
             "sale_label_color": "#ffffff"
           }
