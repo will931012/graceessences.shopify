@@ -1054,7 +1054,8 @@
         "image_overlay_slide_JjPJ9f": {
           "type": "image_overlay_slide",
           "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_Feb_25_2026_11_43_09_AM.png",
+            "image": "shopify://shop_images/un-fondo-blanco-con-lazos-dorados-para-los-best-sellers.png",
+            "image_mobile": "shopify://shop_images/un-fondo-blanco-con-lazos-dorados-para-los-best-sellers.png",
             "overlay_opacity": 20,
             "subheading": "OFFER ENDS SOON",
             "heading": "Premium Fragrances",
